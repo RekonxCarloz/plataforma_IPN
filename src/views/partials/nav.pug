@@ -1,0 +1,22 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container
+    img(src='plataformaResiduos/logo_concurso-nuevo.png')
+    a.navbar-brand(href='#') C.P.S.
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNavAltMarkup.collapse.navbar-collapse
+      .navbar-nav.ml-auto.dropdown
+        a.nav-item.nav-link.active(href='/') Inicio
+        a.nav-item.nav-link(href='/agua') Agua
+        a.nav-item.nav-link(href='/energia') Energ&iacute;a
+        a.nav-item.nav-link(href='/aice') AICE
+        a.nav-item.nav-link(href='/datos_responsable') Datos del Responsable
+        li.nav-item.dropdown
+          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            | Iniciar Sesi&oacute;n
+          .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+            a.dropdown-item(href='/login') Iniciar Sesi&oacute;n
+            a.dropdown-item(href='/contacto') Contacto
+            a.dropdown-item(href='/acerca_de') Acerca de
+            .dropdown-divider
+            a.dropdown-item(href='/') Cerrar Sesi&oacute;n
