@@ -1,0 +1,242 @@
+doctype html
+head
+    include partials/header.pug
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Energ&iacute;a
+
+
+body
+    include partials/nav.pug
+    .container
+        form
+            .form-col
+                h5
+                | Responsable del registro actual:
+        // Pregunta 1
+        .form-group.col-md-6
+            label(for='pregunta1')
+                | 1. &iquest;Cuenta el inmueble con medidores de consumo de energ&iacute;a
+                | el&eacute;ctrica?
+            .custom-control.custom-radio
+                input#opcionSi.custom-control-input(type='radio' name='customRadio')
+                label.custom-control-label(for='opcionSi') Si
+            .custom-control.custom-radio
+                input#opcionNo.custom-control-input(type='radio' name='customRadio')
+                label.custom-control-label(for='opcionNo') No
+            label(for='pregunta1_1') &iquest;Cuenta con copia de los recibos?
+            .custom-control.custom-radio
+                input#opcionSi_1_1.custom-control-input(type='radio' name='customRadio1_1')
+                label.custom-control-label(for='opcionSi_1_1') Si
+            .custom-control.custom-radio
+                input#opcionNo_1_1.custom-control-input(type='radio' name='customRadio1_1')
+                label.custom-control-label(for='opcionNo_1_1') No
+        // Pregunta 2
+        .form-group.col-md-6
+            label(for='pregunta2') 2. Ingresa el consumo aproximado por bimestre de los ultimos a&ntilde;o
+            table.table
+                thead
+                    tr
+                        th(scope='col')
+                        th(scope='col') 1er Bimestre
+                        th(scope='col') 2do Bimestre
+                        th(scope='col') 3er Bimestre
+                        th(scope='col') 4to Bimestre
+                        th(scope='col') 5to Bimestre
+                        th(scope='col') 6to Bimestre
+                tbody
+                    tr
+                        th(scope='row') 2021
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                    tr
+                        th(scope='row') 2020
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                    tr
+                        th(scope='row') 2019
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+        // Pregunta 3
+        .form-group.col-md-6
+            label(for='pregunta3')
+                | 3. &iquest;Incluye el inmueble(s) la separaci&oacute;n de circuitos y
+                | disponibilidad
+                | de apagadores para cada uno?
+            .custom-control.custom-radio
+                input#opcionSiempre.custom-control-input(type='radio' name='customRadio2')
+                label.custom-control-label(for='opcionSiempre') Siempre
+            .custom-control.custom-radio
+                input#opcionCasiSiempre.custom-control-input(type='radio' name='customRadio2')
+                label.custom-control-label(for='opcionCasiSiempre') Casi Siempre
+            .custom-control.custom-radio
+                input#opcionA_veces.custom-control-input(type='radio' name='customRadio2')
+                label.custom-control-label(for='opcionA_veces') A veces
+            .custom-control.custom-radio
+                input#opcionNunca.custom-control-input(type='radio' name='customRadio2')
+                label.custom-control-label(for='opcionNunca') Nunca
+        // Pregunta 4
+        .form-group.col-md-6
+            label(for='pregunta4')
+                | 4. &iquest;Se incluye control del sistema de iluminaci&oacute;n, en
+                | salones laboratorios y talleres, con apagadores, temporizadores o sensores de
+                | movimiento?
+            .custom-control.custom-radio
+                input#opcionSiempre2.custom-control-input(type='radio' name='customRadio3')
+                label.custom-control-label(for='opcionSiempre2') Siempre
+            .custom-control.custom-radio
+                input#opcionCasiSiempre2.custom-control-input(type='radio' name='customRadio3')
+                label.custom-control-label(for='opcionCasiSiempre2') Casi Siempre
+            .custom-control.custom-radio
+                input#opcionA_veces2.custom-control-input(type='radio' name='customRadio3')
+                label.custom-control-label(for='opcionA_veces2') A veces
+            .custom-control.custom-radio
+                input#opcionNunca2.custom-control-input(type='radio' name='customRadio3')
+                label.custom-control-label(for='opcionNunca2') Nunca
+        // Pregunta 5
+        .form-group.col-md-6
+            label(for='pregunta5')
+                | 5. Indique el avance estimado del equipamiento del
+                | sistema de iluminaci&oacute;n en
+                | salones, cub&iacute;culos, laboratorios, oficinas y talleres, con tecnolog&iacute;as de bajo consumo (y en
+                | iluminaci&oacute;n, con l&aacute;mparas LED).
+            .custom-control.custom-radio
+                input#opcion100.custom-control-input(type='radio' name='customRadio4')
+                label.custom-control-label(for='opcion100') 100 %
+            .custom-control.custom-radio
+                input#opcion75.custom-control-input(type='radio' name='customRadio4')
+                label.custom-control-label(for='opcion75') 75 %
+            .custom-control.custom-radio
+                input#opcion50.custom-control-input(type='radio' name='customRadio4')
+                label.custom-control-label(for='opcion50') 50 %
+            .custom-control.custom-radio
+                input#opcion25.custom-control-input(type='radio' name='customRadio4')
+                label.custom-control-label(for='opcion25') 25 %
+            .custom-control.custom-radio
+                input#opcionNada.custom-control-input(type='radio' name='customRadio4')
+                label.custom-control-label(for='opcionNada') Nada
+        // Pregunta 6
+        .form-group.col-md-6
+            label(for='pregunta6')
+                | 6. Indique la proporci&oacute;n en que se han integrado mecanismos de control
+                | autom&aacute;tico para sus sistemas de iluminaci&oacute;n exterior en pasillos, &aacute;reas verdes y
+                | estacionamiento.
+            .custom-control.custom-radio
+                input#opcion100_6.custom-control-input(type='radio' name='customRadio5')
+                label.custom-control-label(for='opcion100_6') 100 %
+            .custom-control.custom-radio
+                input#opcion75_6.custom-control-input(type='radio' name='customRadio5')
+                label.custom-control-label(for='opcion75_6') 75 %
+            .custom-control.custom-radio
+                input#opcion50_6.custom-control-input(type='radio' name='customRadio5')
+                label.custom-control-label(for='opcion50_6') 50 %
+            .custom-control.custom-radio
+                input#opcion25_6.custom-control-input(type='radio' name='customRadio5')
+                label.custom-control-label(for='opcion25_6') 25 %
+            .custom-control.custom-radio
+                input#opcionNada_6.custom-control-input(type='radio' name='customRadio5')
+                label.custom-control-label(for='opcionNada_6') Nada
+        // Pregunta 7
+        .form-group.col-md-6
+            label(for='pregunta7')
+                | 7. &iquest;Cuenta con estrategias que le permitan monitorear que cumple con los
+                | niveles recomendados en materia de las densidades de potencia el&eacute;ctrica y alumbrado de los
+                | espacios?
+            .custom-control.custom-radio
+                input#opcionSi_7.custom-control-input(type='radio' name='customRadio6')
+                label.custom-control-label(for='opcionSi_7') Si
+            .custom-control.custom-radio
+                input#opcionNo_7.custom-control-input(type='radio' name='customRadio6')
+                label.custom-control-label(for='opcionNo_7') No
+            .custom-control.custom-radio
+                input#opcionOtro_7.custom-control-input(type='radio' name='customRadio6')
+                label.custom-control-label(for='opcionOtro_7') Otro
+            input.form-control(for='opcionOtro_7' type='text' placeholder='Indique su respuesta')
+        // Pregunta 8
+        .form-group.col-md-6
+            label(for='pregunta8')
+                | 8. &iquest;Cumple con los niveles recomendados en materia de alumbrado para
+                | estacionamientos y espacios abiertos y que cuentan con control de flujo luminoso a zonas de
+                | inter&eacute;s?.
+            .custom-control.custom-radio
+                input#opcionSi_8.custom-control-input(type='radio' name='customRadio7')
+                label.custom-control-label(for='opcionSi_8') Si
+            .custom-control.custom-radio
+                input#opcionNo_8.custom-control-input(type='radio' name='customRadio7')
+                label.custom-control-label(for='opcionNo_8') No
+        // Pregunta 9
+        .form-group.col-md-6
+            label(for='pregunta9') 9. &iquest;C&oacute;mo prev&eacute; resolver las deficiencias?
+            input#pregunta9.form-control(type='text' placeholder='Indique su respuesta')
+        // Pregunta 10
+        .form-group.col-md-6
+            label(for='pregunta10')
+                | 10. &iquest;En qu&eacute; proporci&oacute;n se ha incluido en las instalaciones, el uso de
+                | timers, sensores de movimiento o nuevas tecnolog&iacute;as como luminarias solares?
+            .custom-control.custom-radio
+                input#opcion100_10.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion100_10') 100 %
+            .custom-control.custom-radio
+                input#opcion75_10.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion75_10') 75 %
+            .custom-control.custom-radio
+                input#opcion50_10.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion50_10') 50 %
+            .custom-control.custom-radio
+                input#opcion25_10.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion25_10') 25 %
+            .custom-control.custom-radio
+                input#opcion0_10.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion0_10') 0 %
+        // Pregunta 11
+        .form-group.col-md-6
+            label(for='pregunta11')
+                | 11. &iquest;En qu&eacute; proporci&oacute;n se ha incluido en las instalaciones el uso de
+                | nuevas tecnolog&iacute;as de alimentaci&oacute;n con energ&iacute;a alterna a trav&eacute;s de la instalaci&oacute;n de celdas
+                | fotovoltaicas, calentadores y paneles solares?
+            .custom-control.custom-radio
+                input#opcion100_11.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion100_11') 100 %
+            .custom-control.custom-radio
+                input#opcion75_11.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion75_11') 75 %
+            .custom-control.custom-radio
+                input#opcion50_11.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion50_11') 50 %
+            .custom-control.custom-radio
+                input#opcion25_11.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion25_11') 25 %
+            .custom-control.custom-radio
+                input#opcion0_11.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion0_11') 0 %

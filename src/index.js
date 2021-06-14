@@ -12,6 +12,7 @@ app.set('view engine', 'pug');
 
 // routes
 app.use(require('./routes/index'));
+app.use(express.static(__dirname + '/public/'));
 
 // Listening server
 app.listen(app.get('port'), () => {

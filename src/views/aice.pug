@@ -1,0 +1,216 @@
+doctype html
+head
+  include partials/header.pug
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title AICE
+
+body
+  include partials/nav.pug
+  .container
+    .form-col
+      h5
+        | Responsable del registro actual:
+        p
+        | Anote los valores (m&sup2;) sobre las siguientes superficies de su Dependencia Polit&eacute;cnica.
+        | Recabar la informaci&oacute;n con base en los planos disponibles de la superficie de su D.P. En el caso de
+        | las D.P.
+        | que comparten un inmueble as&iacute; como &aacute;reas verdes y espacios abiertos comunes, deben acordar
+        | estrategias
+        | colectivas de recopilaci&oacute;n de informaci&oacute;n y seguimiento del manejo.
+    form
+      // Pregunta 1    Dato fijo
+      .form-group.col-md-6
+        label(for='inputSuperficieDP')
+          | 1. Superficie total del pol&iacute;gono que aloja a la D.P. (en
+          | metros
+          | cuadrados)*
+        input#inputSuperficieDP(type='text' placeholder='m²')
+      // Pregunta 2   Dato fijo En caso de modificación... actualizar información
+      .form-group.col-md-6
+        label(for='inputSuperficieEyC')
+          | 2. Superficie total del pol&iacute;gono ocupada por edificaciones y
+          | concreto (en metros cuadrados)*
+        input#inputSuperficieEyC(type='text' placeholder='m²')
+      // Pregunta 3   Dato fijo En caso de modificación... actualizar información
+      .form-group.col-md-6
+        label(for='inputSuperficieEsinC')
+          | 3. Superficie total del pol&iacute;gono ocupada por espacios
+          | destinados
+          | a
+          | estacionamiento sin concreto (en metros cuadrados)*
+        input#inputSuperficieEsinC(type='text' placeholder='m²')
+      // Pregunta 4    Dato fijo En caso de modificación... actualizar información
+      .form-group.col-md-6
+        label(for='inputSuperficieCV')
+          | 4. Superficie total del pol&iacute;gono que tiene cubierta vegetal
+          | (cubresuelos, &aacute;rboles, arbustos) (en metros cuadrados)*
+        input#inputSuperficieCV(type='text' placeholder='m²')
+      // Pregunta 5
+      .form-group.col-md-6
+        label(for='SuperficieVegetal')
+          | 5. Seg&uacute;n su apreciaci&oacute;n, de la superficie vegetal se&ntilde;alada,
+          | &iquest;qu&eacute; proporci&oacute;n del &aacute;rea
+          | asignar&iacute;a a los siguientes patrones de mantenimiento?*
+        table#SuperficieVegetal.table-striped
+          thead
+            tr
+              th(scope='col')
+              th.table-warning(scope='col') Mas del 50%
+              th.table-warning(scope='col') Entre 50% y 30%
+              th.table-warning(scope='col') Menos de 30%
+              th.table-warning(scope='col') N/A &nbsp; &nbsp; 
+          tbody
+            tr
+              th(scope='row') Mantenimiento Intensivo
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+            tr
+              th(scope='row') Mantenimiento Moderado
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+            tr
+              th(scope='row') Mantenimiento Bajo
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+      // Pregunta 6
+      .form-group.col-md-6
+        label(for='ComponentesVegetales')
+          | 6. &iquest;Qu&eacute; proporci&oacute;n estima corresponde a los siguientes
+          | componentes vegetales?*
+        table#ComponentesVegetales.table-striped
+          thead
+            tr
+              th(scope='col')
+              th.table-warning(scope='col') Mas del 50%
+              th.table-warning(scope='col') Entre 50% y 30%
+              th.table-warning(scope='col') Menos de 30%
+          tbody
+            tr
+              th(scope='row') Con presencia de &aacute;rboles
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+            tr
+              th(scope='row') Con cubresuelos (c&eacute;sped y otra vegetaci&oacute;n rastrera)
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+            tr
+              th(scope='row') Con vegetaci&oacute;n arbustiva
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+            tr
+              th(scope='row') Otros
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+      // Pregunta 7
+      .form-group.col-md-6
+        label(for='ComponentesVegetales')
+          | 7. De la superficie con presencia de &aacute;rboles se&ntilde;alar seg&uacute;n su
+          | apreciaci&oacute;n *
+        table#ComponentesVegetales.table-striped
+          thead
+            tr
+              th(scope='col')
+              th.table-warning(scope='col') Mas del 50%
+              th.table-warning(scope='col') Entre 50% y 30%
+              th.table-warning(scope='col') Menos de 30%
+          tbody
+            tr
+              th(scope='row') &Aacute;rboles maduros con estado aceptable de conservaci&oacute;n
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+            tr
+              th(scope='row') &Aacute;rboles medianos o deteriorados
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+            tr
+              th(scope='row') Suelos desnudos con alg&uacute;n grado de erosi&oacute;n
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+              td
+                .form-check
+                  input(type='checkbox')
+      .form-group.col-md-6
+        label(for='planosYmapas') Incluye en esta secci&oacute;n las evidencias gr&aacute;ficas de la informaci&oacute;n 
+        .input-group.mb-3
+          .input-group-prepend
+            span.input-group-text Subir archivo
+          .custom-file
+            input#inputGroupFile01.custom-file-input(type='file')
+            label.custom-file-label(for='inputGroupFile01') Eleg&iacute;r Archivo... 

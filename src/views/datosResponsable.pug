@@ -1,0 +1,126 @@
+doctype html
+head
+  include partials/header.pug
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title Datos del responsable actual
+
+include partials/nav.pug
+.container.topContainer
+  form
+    .form-row
+      .form-group.col-md-6
+        label(for='inputName') Nombre(s)*
+        input#inputName.form-control(type='text' placeholder='Nombre(s)')
+      .form-group.col-md-3
+        label(for='inputAP') Apellido Paterno*
+        input#inputAP.form-control(type='text' placeholder='Apellido Paterno')
+      .form-group.col-md-3
+        label(for='inputAM') Apellido Materno*
+        input#inputAM.form-control(type='text' placeholder='Apellido Materno')
+    .form-row
+      .form-group.col-md-6
+        label(for='correo') Correo Electr&oacute;nico*
+        input#inputEmail.form-control(type='email' placeholder='Correo Electronico')
+      .form-group.col-md-6
+        label(for='inputSector') &iquest;A qu&eacute; sector perteneces?*
+        select#inputSector.form-control
+          option(selected='') --
+          option Docente
+          option Estudiante
+          option Administrativo
+          option Otro
+    .form-row
+      .form-group.col-md-6
+        label(for='inputComiteAmbiental') &iquest;A qu&eacute; Comit&eacute; Ambiental perteneces?*
+        select#inputComiteAmbiental.form-control
+          option(selected='') --
+          option Nivel Media Superior
+          option Nivel Superior
+          option Centros de Investigaci&oacute;n
+          option Centros de Vinculaci&oacute;n y Desarrollo Regional
+          option Unidades de Apoyo Acad&eacute;mico (CENLEX &amp; DDiCyT)
+          option Otras Dependencias Polit&eacute;cnicas
+      .form-group.col-md-6
+        label(for='inputMediaSuperior') Unidad Acad&eacute;mica de Nivel Medio Superior
+        input#inputCity.form-control(type='text')
+    .form-row
+      .form-group.col-md-6
+        label(for='inputCInvestigacion') Centro de Investigaci&oacute;n*
+        select#inputCInvestigacion.form-control
+          option(selected='') --
+          option CEPROBI
+          option CICIMAR
+          option CIIDIR Durango
+          option CIIDIR Michoac&aacute;n
+          option CIIDIR Oaxaca
+          option CIIDIR Sinaloa
+          option CIIEMAD
+          option CIC
+          option CIECAS
+          option CB Gen&oacute;mica
+          option CICATA Legaria
+          option CICATA Quer&eacute;taro
+          option CICATA Altamira
+          option CICATA Morelos
+          option CIBA Tlaxcala
+          option CIDETI
+          option CIDETEC
+          option CIITEC
+          option CMP+L
+          option CRP+L Tabasco
+    .form-row
+      .form-group.col-md-6
+        label(for='inputUaA') Unidad de Apoyo Acad&eacute;mico
+        select#inputUaA.form-control
+          option(selected='') --
+          option DDiCyT
+          option CENLEX Zacatenco
+          option CENLEX Santo Tom&aacute;s
+    .form-row
+      .form-group.col-md-6
+        label(for='inputCVDR') Centro de Vinculaci&oacute;n y Desarrollo Regional*
+        select#inputCVDR.form-control
+          option(selected='') --
+          option CVDR Cajeme Son
+          option CVDR Campeche
+          option CVDR Canc&uacute;n 
+          option CVDR Culiac&aacute;n
+          option CVDR Durango
+          option CVDR Los Mochis
+          option CVDR Mazatl&aacute;n
+          option CVDR Morelia
+          option CVDR Oaxaca
+          option CVDR Tampico
+          option CVDR Tijuana
+          option CIITA Veracruz
+          option CIITA Chihuaha
+    .form-row
+      .form-group.col-md-6
+        label(for='inputOtraDependencia') Otra Dependencia Polit&eacute;cnica
+        select#inputOtraDependencia.form-control
+          option(selected='') --
+          option Direcci&oacute;n General
+          option CENAC
+          option Decanato
+          option Sr&iacute;a. Acad&eacute;mica - Sr&iacute;a. Investigaci&oacute;n y Posgrado
+          option Secretar&iacute;a de Innovaci&oacute;n e Integraci&oacute;n Social
+          option CGPII - Sr&iacute;a. Servicios Educativos
+          option DSETT
+          option Biblioteca Nacional de Ciencia y Tecnolog&iacute;a
+          option Direcci&oacute;n de Fomento Deportivo
+          option Direcci&oacute;n de Difusi&oacute;n Cultural
+          option Direcci&oacute;n de Administraci&oacute;n Escolar (DAE)
+          option COFAA
+          option POI
+          option COCENDI
+          option DFIE
+          option Techn&oacute;poli e incubadoras
+          option Direcci&oacute;n de Servicios Generales
+          option Otra
+      .form-group.col-md-6
+        label(for='inputDP_otra') Indica cu&aacute;l: 
+        input#inputDP_otra.form-control(type='text' placeholder='¿Cuál?')
+    p
+      div(align='center')
+        button.btn.btn-primary(type='submit') Actualizar Informaci&oacute;n
