@@ -1,23 +1,30 @@
-nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
   .container
-    
-    a.navbar-brand(href='#') C.P.S.
-    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+    a.navbar-brand(href='#') CPS
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
       span.navbar-toggler-icon
-    #navbarNavAltMarkup.collapse.navbar-collapse
-      .navbar-nav.ml-auto.dropdown
-        a.nav-item.nav-link.active(href='/') Inicio
-        a.nav-item.nav-link(href='/agua') Agua
-        a.nav-item.nav-link(href='/energia') Energ&iacute;a
-        a.nav-item.nav-link(href='/aice') AICE
-        a.nav-item.nav-link(href='/datos_responsable') Datos del Responsable
+    #navbarNavDropdown.collapse.navbar-collapse.ml-auto
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(aria-current='page' href='/') Inicio
+        li.nav-item
+          a.nav-link(href='/agua') Agua
+        li.nav-item
+          a.nav-link(href='/energia') Energ&iacute;a
+        li.nav-item
+          a.nav-link(href='/aice') AICE
+        li.nav-item
+          a.nav-link(href='/datos_responsable') Datos del responsable
         li.nav-item.dropdown
-          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Iniciar Sesi&oacute;n
-          .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-            a.dropdown-item(href='/login') Iniciar Sesi&oacute;n
-            a.dropdown-item(href='/contacto') Contacto
-            a.dropdown-item(href='/acerca_de') Acerca de
+          ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+            li
+              a.dropdown-item(href='/login') Iniciar Sesi&oacute;n
+            li
+              a.dropdown-item(href='/about') Acerca De 
+            li
+              a.dropdown-item(href='/contacto') Contacto
             .dropdown-divider
-            a.dropdown-item(href='/') Cerrar Sesi&oacute;n
-            
+            li
+              a.dropdown-item(href='#') Cerrar Sesi&oacute;n

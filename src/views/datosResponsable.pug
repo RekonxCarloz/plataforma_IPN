@@ -3,25 +3,25 @@ head
   include partials/header.pug
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  title Datos del responsable actual
+  title Responsable actual
 
 include partials/nav.pug
-.container.topContainer
+.container.marginTop
+  h5 
+    | Responsable del registro actual: 
+    p
   form
     .form-row
-      .form-group.col-md-6
-        label(for='inputName') Nombre(s)*
-        input#inputName.form-control(type='text' placeholder='Nombre(s)')
-      .form-group.col-md-3
-        label(for='inputAP') Apellido Paterno*
-        input#inputAP.form-control(type='text' placeholder='Apellido Paterno')
-      .form-group.col-md-3
-        label(for='inputAM') Apellido Materno*
-        input#inputAM.form-control(type='text' placeholder='Apellido Materno')
+      .input-group.col-md-6
+        span.input-group-text Nombre *
+        input.form-control(type='text' aria-label='Nombre' placeholder='Nombre')
+        input.form-control(type='text' aria-label='Apellido' placeholder='Apellidos')
+
+      .input-group.col-md-6
+        span.input-group-text Correo Electr&oacute;nico *
+        input#inputEmail.form-control(type='email' placeholder='Correo Electrónico')
+
     .form-row
-      .form-group.col-md-6
-        label(for='correo') Correo Electr&oacute;nico*
-        input#inputEmail.form-control(type='email' placeholder='Correo Electronico')
       .form-group.col-md-6
         label(for='inputSector') &iquest;A qu&eacute; sector perteneces?*
         select#inputSector.form-control
@@ -124,3 +124,7 @@ include partials/nav.pug
     p
       div(align='center')
         button.btn.btn-primary(type='submit') Actualizar Informaci&oacute;n
+
+
+// footer
+include partials/footer.pug

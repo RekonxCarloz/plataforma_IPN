@@ -1,3 +1,33 @@
-.topContainer{
-    padding-top: 20px;
+.marginTop{
+    padding-top: 30px;
+}
+
+.marginLeft{
+    padding-left: 10px;
+}
+
+.marginRight{
+    padding-right: 10px;
+}
+
+.main-footer {
+    background-color: #13322B;
+    min-height: 56px;
+    color: #FFF;
+    padding: 0px 0 0px;
+    text-align: left;
+    font-weight: 300;
+}
+
+
+.footer-pleca {
+    background-color: #12322B;
+    background-image: url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);
+    background-repeat: repeat-x;
+    display: block;
+}
+
+.container-fluid:after, .container-fluid:before, .container:after, .container:before, .row:after, .row:before {
+    display: table;
+    content: " ";
 }

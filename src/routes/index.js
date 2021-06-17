@@ -7,7 +7,7 @@ router.get('/', (req, res) =>{
 });
 
 // About
-router.get('/acerca_de', (req, res) =>{
+router.get('/about', (req, res) =>{
     res.render('about.pug');
 });
 

@@ -7,11 +7,12 @@ head
 
 body
     include partials/nav.pug
-    .container
+    .container.marginTop
         form
             .form-col
                 h5
-                | Responsable del registro actual:
+                    | Responsable del registro actual:
+                    p
         // Pregunta 1
         .form-group.col-md-6
             label(for='pregunta1') 1. &iquest;Cuenta el inmueble con medidores de consumo de agua potable?
@@ -155,3 +156,5 @@ body
             .custom-control.custom-radio
                 input#opcion0_7.custom-control-input(type='radio' name='customRadio5')
                 label.custom-control-label(for='opcion0_7') Nada
+// footer
+include partials/footer.pug
