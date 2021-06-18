@@ -2,12 +2,43 @@
     padding-top: 30px;
 }
 
+.marginBottom{
+    padding-bottom: 50px;
+}
+
 .marginLeft{
     padding-left: 10px;
 }
 
 .marginRight{
     padding-right: 10px;
+}
+
+.cabecera-ipn {
+    position: relative;
+    z-index: 1000;
+}
+
+.header-logos {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: #FFF;
+}
+
+.utileriasIpn {
+    font-family: 'Roboto', "Open Sans", sans-serif;
+    position: absolute;
+    right: 15px;
+}
+
+.barra-enlace {
+    list-style: none;
+    float: right;
+    margin-top: 8px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .main-footer {
@@ -19,6 +50,36 @@
     font-weight: 300;
 }
 
+.list-info{
+    background-size: cover;
+    background-position: bottom;
+    padding: 30px 10px 10px;
+}
+
+.main-footer .list-info ul {
+    margin: 0 0 60px;
+    padding: 0;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-color: #FFF;
+    font-weight: 300;
+}
+
+.social-icon {
+    background-image: url(https://framework-gb.cdn.gob.mx/landing/img/facebook.png);
+    display: block;
+    text-indent: -9999px;
+    margin-right: 5px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    list-style-type: none;
+}
 
 .footer-pleca {
     background-color: #12322B;
@@ -27,7 +88,11 @@
     display: block;
 }
 
-.container-fluid:after, .container-fluid:before, .container:after, .container:before, .row:after, .row:before {
-    display: table;
-    content: " ";
+.container, .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container, .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
 }
