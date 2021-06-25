@@ -6,7 +6,18 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Login - Plataforma CPS
-    body 
+body 
     include partials/nav.pug
-
-    include partials/footer.pug
+    .center
+        h1 Iniciar Sesión
+        form(method="post")
+            .txt_field
+                input(type='text' required)
+                span
+                label Usuario
+            .txt_field
+                input(type='password' required)
+                span
+                label Contrase&ntilde;a
+            input(type='submit' value='Iniciar Sesión')
+include partials/footer.pug
