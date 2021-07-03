@@ -14,7 +14,7 @@ body
                     | Responsable del registro actual:
                     p
         // Pregunta 1
-        .form-group.col-md-6
+        .form-group.col-md-6.containerPregunta
             label(for='pregunta1') 1. &iquest;Cuenta el inmueble con medidores de consumo de agua potable?
             .custom-control.custom-radio
                 input#opcionSi_1.custom-control-input(type='radio' name='customRadio')
@@ -22,6 +22,7 @@ body
             .custom-control.custom-radio
                 input#opcionNo_1.custom-control-input(type='radio' name='customRadio')
                 label.custom-control-label(for='opcionNo_1') No
+                p
             label(for='pregunta1_1') &iquest;Cuenta con copia de los recibos?
             .custom-control.custom-radio
                 input#opcionSi_1_1.custom-control-input(type='radio' name='customRadio1_1')
@@ -30,7 +31,7 @@ body
                 input#opcionNo_1_1.custom-control-input(type='radio' name='customRadio1_1')
                 label.custom-control-label(for='opcionNo_1_1') No
         // Pregunta 2
-        .form-group.col-md-6
+        .form-group.col-md-6.containerPregunta
             label(for='pregunta2') 2. Ingresa el consumo aproximado por bimestre de los ultimos a&ntilde;o
             table.table
                 thead
@@ -86,7 +87,7 @@ body
                         td
                             input#pregunta2.form-control(type='text' placeholder='L')
         // Pregunta 3
-        .form-group.col-md-6
+        .form-group.col-md-6.containerPregunta
             label(for='pregunta3')
                 | 3. &iquest;Cuenta el inmueble con infraestructura para la captaci&oacute;n y
                 | aprovechamiento de las aguas pluviales en usos espec&iacute;ficos?
@@ -97,7 +98,7 @@ body
                 input#opcionNo_3.custom-control-input(type='radio' name='customRadio2')
                 label.custom-control-label(for='opcionNo_3') No
         // Pregunta 4
-        .form-group.col-md-6
+        .form-group.col-md-6.containerPregunta
             label(for='pregunta4')
                 | 4. &iquest;Cuenta su inmueble con alguna planta para el tratamiento de las aguas
                 | residuales, para su reuso en procesos asociados, eliminando su vertido al sistema de
@@ -111,7 +112,7 @@ body
             label(for='pregunta4') En caso de haber seleccionado &quot;Si&quot;, describir las caracter&iacute;sticas
             input#pregunta4.form-control(type='text' placeholder='Indique su respuesta')
         // Pregunta 5
-        .form-group.col-md-6
+        .form-group.col-md-6.containerPregunta
             label(for='pregunta5')
                 | 5. Indique el avance estimado del equipamiento del sistema hidr&aacute;ulico de
                 | su DP, con dispositivos y componentes ahorradores de agua.
@@ -131,13 +132,13 @@ body
                 input#opcion0_5.custom-control-input(type='radio' name='customRadio4')
                 label.custom-control-label(for='opcion0_5') Nada
         // Pregunta 6
-        .form-group.col-md-6
+        .form-group.col-md-6.containerPregunta
             label(for='pregunta6')
                 | 6. Indique el volumen de agua tratada (m&sup3;) que su DP emplea para riego de
                 | las &aacute;reas verdes
             input#pregunta6.form-control(type='text' placeholder='m³')
         // Pregunta 7
-        .form-group.col-md-6
+        .form-group.col-md-6.containerPregunta
             label(for='pregunta7')
                 | 7. Proporci&oacute;n en que se han integrado mecanismos de control autom&aacute;tico y
                 | sistemas de riego, alimentados con agua tratada.

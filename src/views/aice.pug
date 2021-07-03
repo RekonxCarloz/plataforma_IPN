@@ -8,7 +8,7 @@ head
 body
   include partials/nav.pug
   .containerText
-    .form-col
+    .form-col.containerPregunta
       h5
         | Responsable del registro actual:
         p
@@ -20,20 +20,20 @@ body
         | colectivas de recopilaci&oacute;n de informaci&oacute;n y seguimiento del manejo.
     form
       // Pregunta 1    Dato fijo
-      .form-group.col-md-6
+      .form-group.col-md-6.containerPregunta
         label(for='inputSuperficieDP')
           | 1. Superficie total del pol&iacute;gono que aloja a la D.P. (en
           | metros
           | cuadrados)*
         input#inputSuperficieDP(type='text' placeholder='m²')
       // Pregunta 2   Dato fijo En caso de modificación... actualizar información
-      .form-group.col-md-6
+      .form-group.col-md-6.containerPregunta
         label(for='inputSuperficieEyC')
           | 2. Superficie total del pol&iacute;gono ocupada por edificaciones y
           | concreto (en metros cuadrados)*
         input#inputSuperficieEyC(type='text' placeholder='m²')
       // Pregunta 3   Dato fijo En caso de modificación... actualizar información
-      .form-group.col-md-6
+      .form-group.col-md-6.containerPregunta
         label(for='inputSuperficieEsinC')
           | 3. Superficie total del pol&iacute;gono ocupada por espacios
           | destinados
@@ -41,13 +41,13 @@ body
           | estacionamiento sin concreto (en metros cuadrados)*
         input#inputSuperficieEsinC(type='text' placeholder='m²')
       // Pregunta 4    Dato fijo En caso de modificación... actualizar información
-      .form-group.col-md-6
+      .form-group.col-md-6.containerPregunta
         label(for='inputSuperficieCV')
           | 4. Superficie total del pol&iacute;gono que tiene cubierta vegetal
           | (cubresuelos, &aacute;rboles, arbustos) (en metros cuadrados)*
         input#inputSuperficieCV(type='text' placeholder='m²')
       // Pregunta 5
-      .form-group.col-md-6
+      .form-group.col-md-6.containerPregunta
         label(for='SuperficieVegetal')
           | 5. Seg&uacute;n su apreciaci&oacute;n, de la superficie vegetal se&ntilde;alada,
           | &iquest;qu&eacute; proporci&oacute;n del &aacute;rea
@@ -104,7 +104,7 @@ body
                 .form-check
                   input(type='checkbox')
       // Pregunta 6
-      .form-group.col-md-6
+      .form-group.col-md-6.containerPregunta
         label(for='ComponentesVegetales')
           | 6. &iquest;Qu&eacute; proporci&oacute;n estima corresponde a los siguientes
           | componentes vegetales?*
@@ -161,7 +161,7 @@ body
                 .form-check
                   input(type='checkbox')
       // Pregunta 7
-      .form-group.col-md-6
+      .form-group.col-md-6.containerPregunta
         label(for='ComponentesVegetales')
           | 7. De la superficie con presencia de &aacute;rboles se&ntilde;alar seg&uacute;n su
           | apreciaci&oacute;n *
@@ -206,7 +206,7 @@ body
               td
                 .form-check
                   input(type='checkbox')
-      .form-group.col-md-6
+      .form-group.col-md-6.containerPregunta
         label(for='planosYmapas') Incluye en esta secci&oacute;n las evidencias gr&aacute;ficas de la informaci&oacute;n 
         .input-group.mb-3
           .input-group-prepend
