@@ -4,6 +4,8 @@ script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundl
 // CSS
 link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
 link(rel="stylesheet" href="css/style.css")
+link(rel="stylesheet" href="css/headerStyle.css")
+link(rel="stylesheet" href="css/footerStyle.css")
 
 nav#header.navbar.bg-dark.navbar-dark.navbar-expand-sm.navbar-gob(data-v-27b47ae7='')
   .container(data-v-27b47ae7='')
@@ -26,22 +28,29 @@ nav#header.navbar.bg-dark.navbar-dark.navbar-expand-sm.navbar-gob(data-v-27b47ae
 
 
 
-.cabecera-ipn
-    .utileriasIpn
-        ul.barra-enlaces
-            li
-                a(href='https://www.ipn.mx/directorio.html') DIRECTORIO
-                |  |
-            li
-                a(href='https://www.ipn.mx/correo-electronico.html') CORREO ELECTR&Oacute;NICO
-                |  |
-            li
-                a(href='https://www.ipn.mx/calendario-academico.html') CALENDARIO
-                |  |
-            li
-                a(href='https://www.ipn.mx/buzon.html') BUZ&Oacute;N
-    .header-logos
-        .text-center
-            img.plecaGob.gob(src='https://www.residuos.sustentabilidad.ipn.mx/public/img/pleca-gob.png' alt='')
-            a.ipnLogo-enlace(href='https://www.ipn.mx')
-            img.plecaGob(src='https://www.residuos.sustentabilidad.ipn.mx/public/img/pleca-ipn.png' alt='')
+.containerHeader
+    .cabecera-ipn
+        .utileriasIpn
+            ul.barra-enlaces
+                li
+                    a(href='https://www.ipn.mx/directorio.html') DIRECTORIO
+                    |  |
+                li
+                    a(href='https://www.ipn.mx/correo-electronico.html') CORREO ELECTR&Oacute;NICO
+                    |  |
+                li
+                    a(href='https://www.ipn.mx/calendario-academico.html') CALENDARIO
+                    |  |
+                li
+                    a(href='https://www.ipn.mx/buzon.html') BUZ&Oacute;N
+        .header-logos.col-md-12
+            .text-center
+                img.plecaGob.gobHeader(src='img/pleca-gob.png' alt='')
+                a.ipnLogo-enlace(href='https://www.ipn.mx')
+                    img.plecaGob(src='img/logo_ipn.svg' alt='')
+                    p.d-inline-block.tituloLogo
+                        | Instituto Politécnico Nacional 
+                        br
+                        span.sm "La Técnica al Servicio de la Patria"
+
+

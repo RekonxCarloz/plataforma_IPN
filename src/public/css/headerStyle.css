@@ -1,0 +1,84 @@
+.containerHeader{
+    font-family: Roboto,"Open Sans",sans-serif;
+}
+
+.gobHeader{
+    position: relative;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.plecaGob{
+    height: 90px;
+}
+
+.ipnLogo-enlace img{
+    height: 70px;
+    padding-right: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.ipnLogo-enlace a{
+    background-color: transparent;
+}
+
+.d-inline-block {
+    display: inline-block!important;
+}
+
+.tituloLogo {
+    font-size: 14px;
+    color: #424141;
+    position: relative;
+    top: 34px;
+}
+
+.tituloLogo .sm {
+    font-size: 11.5px;
+    position: relative;
+    top: -4px;
+}
+
+.barra-enlaces {
+    list-style: none;
+    font-weight: 400;
+    line-height: 1.5
+}
+
+.barra-enlaces li {
+    display: inline;
+    margin-left: 5px;
+}
+
+.barra-enlaces li a {
+    color: #363636;
+    display: inline;
+    font-size: .7em;
+    text-decoration: none;
+}
+
+.cabecera-ipn {
+    position: relative;
+    z-index: 1000;
+}
+
+.header-logos {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: #FFF;
+}
+
+.utileriasIpn {
+    font-family: 'Roboto', "Open Sans", sans-serif;
+    position: absolute;
+    right: 15px;
+}

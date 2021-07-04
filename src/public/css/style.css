@@ -1,13 +1,17 @@
 body{
     background-color: rgba(255, 13, 13, 0.2);
+    font-family: Roboto,"Open Sans",sans-serif;
+    font-size: small;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
-footer{
-    position: relative;
-    padding: 10px 10px 0px 10px;
-    bottom: 0;
+.container {
     width: 100%;
-    height: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .containerText{
@@ -121,92 +125,20 @@ input[type="submit"]:hover{
     transition: .5s;
 }
 
-.cabecera-ipn {
-    position: relative;
-    z-index: 1000;
-}
-
-.header-logos {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    background: #FFF;
-}
-
-.utileriasIpn {
-    font-family: 'Roboto', "Open Sans", sans-serif;
-    position: absolute;
-    right: 15px;
-}
-
-
 .text-center {
     text-align: center;
 }
-
-.main-footer {
-    background-color: #13322B;
-    min-height: 56px;
-    color: #FFF;
-    padding: 0px 0 0px;
-    text-align: left;
-    font-weight: 300;
-}
-
 .list-info{
     background-size: cover;
     background-position: bottom;
     padding: 30px 10px 10px;
 }
 
-.main-footer .list-info ul {
-    margin: 0 0 60px;
-    padding: 0;
-    font-weight: 300;
-}
 
 a {
     text-decoration: none;
-    text-decoration-color: #FFF;
+    color: rgb(255, 255, 255);
+    text-decoration-color: white;
     font-weight: 300;
 }
 
-.social-icon {
-    background-image: url(https://framework-gb.cdn.gob.mx/landing/img/facebook.png);
-    display: block;
-    text-indent: -9999px;
-    margin-right: 5px;
-}
-
-.footer-pleca {
-    background-color: #12322B;
-    background-image: url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);
-    background-repeat: repeat-x;
-    display: block;
-}
-
-.container, .container-fluid {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.container, .container-fluid {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.barra-enlaces {
-    list-style: none;
-    font-weight: 400;
-    line-height: 1.5
-}
-
-.barra-enlaces li {
-    display: inline;
-    margin-left: 5px;
-}
-
-.barra-enlaces li a {
-    color: #363636;
-    display: inline;
-    font-size: .7em;
-    text-decoration: none;
-}
