@@ -1,5 +1,4 @@
 .main-footer {
-    background-color: #f6f6f6;
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 300;
     min-height: 56px;
@@ -14,7 +13,7 @@
 
 .main-footer .list-info {
     line-height: auto;
-    background-color: #eaeaea;
+    background-color: #e0e0e0;
     padding: 30px 0 70px;
     margin-bottom: 30px;
 }

@@ -1,9 +1,16 @@
 body{
-    background-color: rgba(255, 13, 13, 0.2);
     font-family: Roboto,"Open Sans",sans-serif;
     font-size: small;
     font-weight: 400;
     line-height: 1.5;
+}
+
+body h5{
+    font-size: 15px;
+}
+
+body::before{
+    opacity: .9;
 }
 
 .container {
@@ -15,7 +22,7 @@ body{
 }
 
 .containerText{
-    background: rgba(255, 255, 255, 2);
+    background: rgba(192, 192, 192, 0.5);
     margin-top: 20px;
     margin-bottom: 30px;
     margin-right: 110px;
@@ -30,7 +37,7 @@ body{
 
 .containerPregunta{
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 

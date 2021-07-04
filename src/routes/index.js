@@ -31,8 +31,13 @@ router.get('/contacto', (req, res) =>{
 });
 
 // Datos Responsable
-router.get('/datos_responsable', (req, res) =>{
-    res.render('datosResponsable.pug');
+router.get('/infoGeneral', (req, res) =>{
+    res.render('infoGeneral.pug');
+});
+
+// Informacion operativa
+router.get('/infoOperativa', (req, res) =>{
+    res.render('infoOperativa.pug');
 });
 
 // Login
