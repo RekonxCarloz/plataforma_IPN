@@ -20,7 +20,7 @@ app.listen(app.get('port'), () => {
     console.log('Server listo', app.get('port'));
 
     // Conexión a base de datos
-    sequelize.authenticate().then(() => {
+    sequelize.sync( force = false ).then(() => {
         console.log("Conection Success")
     }).catch(error =>{
         console.log("Error en la base de datos", error);
