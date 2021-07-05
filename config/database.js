@@ -9,6 +9,6 @@ module.exports = {
     define: {
         timestamp: false,
         // Generar claves foraneas de tipo id_llave en lugar de idLLave
-        undescored: true
+        underscored: true
     }
 }
