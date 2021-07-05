@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // routes
-app.use(require('./routes/index'));
+app.use(require('./routes/routes'));
 app.use(express.static(__dirname + '/public/'));
 
 // Listening server

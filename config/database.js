@@ -7,6 +7,8 @@ module.exports = {
     host: process.env.DB_HOST || "localhost",
     dialect: process.env.DB_DIALECT || "mysql",
     define: {
-        timestamp: false
+        timestamp: false,
+        // Generar claves foraneas de tipo id_llave en lugar de idLLave
+        undescored: true
     }
 }
