@@ -8,6 +8,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Usuarios.init({
+    id_dependencia: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     nombre: DataTypes.STRING,
     nombreCorto: DataTypes.STRING,
     usuario: DataTypes.STRING,
