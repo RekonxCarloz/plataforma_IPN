@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     funcion: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'datos_Responsable',
+    tableName: 'datos_Responsable',
   });
   return datos_Responsable;
 };

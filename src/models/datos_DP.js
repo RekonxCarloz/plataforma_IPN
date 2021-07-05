@@ -18,13 +18,13 @@ module.exports = (sequelize, DataTypes) => {
     id_responsable: DataTypes.INTEGER,
     nombre: DataTypes.STRING,
     estado: DataTypes.STRING,
-    delegacion/Municipio: DataTypes.STRING,
+    delegacion_Municipio: DataTypes.STRING,
     colonia: DataTypes.STRING,
     calle_numero: DataTypes.STRING,
     codigoPostal: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'datos_DP',
+    tableName: 'datos_DP',
   });
   return datos_DP;
 };

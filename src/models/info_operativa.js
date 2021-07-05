@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     visitantes_por_dia: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'info_operativa',
+    tableName: 'info_operativa',
   });
   return info_operativa;
 };
