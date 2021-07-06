@@ -14,8 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   datos_DP.init({
-    id_dependencia: DataTypes.INTEGER,
-    id_responsable: DataTypes.INTEGER,
+    id_dependencia:{
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     nombre: DataTypes.STRING,
     estado: DataTypes.STRING,
     delegacion_Municipio: DataTypes.STRING,
@@ -24,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     codigoPostal: DataTypes.INTEGER
   }, {
     sequelize,
-    tableName: 'datos_DP',
+    tableName: 'datos_dp',
   });
   return datos_DP;
 };

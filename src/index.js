@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const { connection } = require('../database/db');
+const { sequelize } = require('../src/models/index');
 
 // Settings
 app.set('port', 8080);
@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/public/'));
 app.listen(app.get('port'), () => {
     console.log('Server listo', app.get('port'));
 
-    connection.sync({ force: true }).then(()=>{
+    sequelize.sync({ force: true }).then(()=>{
         console.log("Database connection success");
     })
 

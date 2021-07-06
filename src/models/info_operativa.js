@@ -14,9 +14,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   info_operativa.init({
-    id_dependencia: DataTypes.INTEGER,
+    id_dependencia: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     personal_docentes: DataTypes.INTEGER,
-    personal_PAAE: DataTypes.INTEGER,
+    personal_paae: DataTypes.INTEGER,
     estudiantes: DataTypes.INTEGER,
     personal_limp_jard: DataTypes.INTEGER,
     personal_mando: DataTypes.INTEGER,

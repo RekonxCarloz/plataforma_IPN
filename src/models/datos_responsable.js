@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   datos_Responsable.init({
-    id_responsable: DataTypes.INTEGER,
+    id_responsable: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     nombre_responsable: DataTypes.STRING,
     email: DataTypes.STRING,
     extension: DataTypes.INTEGER,
@@ -23,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     funcion: DataTypes.STRING
   }, {
     sequelize,
-    tableName: 'datos_Responsable',
+    tableName: 'datos_responsable',
   });
   return datos_Responsable;
 };
