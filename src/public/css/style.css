@@ -10,6 +10,17 @@ body h5{
     font-size: 15px;
 }
 
+.titulos {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.combineLabelInput {
+    text-align: right;
+}
+
 .form-control{
     font-size: 12px;
 }
