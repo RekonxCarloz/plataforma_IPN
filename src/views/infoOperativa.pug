@@ -9,5 +9,40 @@ html(lang="en")
 body
 include partials/nav.pug
 .containerText
+    h5.titulos
+        | Informaci&oacute;n Operativa
+    h3
+        | N&uacute;mero de usuarios
+    .combineLabelInput
+        .form-group.row
+            label.col-form-label.col-md-3 Personal Docente *
+            .col-md-2
+                input.form-control.h-75.w-75(type="number")
+        .form-group.row
+            label.col-form-label.col-md-3 Personal PAAE *
+            .col-md-2
+                input.form-control.h-75.w-75(type="number")
+        .form-group.row
+            label.col-form-label.col-md-3 Estudiantes *
+            .col-md-2
+                input.form-control.h-75.w-75(type="number")
+        .form-group.row
+            label.col-form-label.col-md-3 Empleados de jardiner&iacute;a y limpieza *
+            .col-md-2
+                input.form-control.h-75.w-75(type="number")
+        .form-group.row
+            label.col-form-label.col-md-3 Personal de mando *
+            .col-md-2
+                input.form-control.h-75.w-75(type="number")
+        .form-group.row
+            label.col-form-label.col-md-3 Visitantes por d&iacute;a *
+            .col-md-2
+                input.form-control.h-75.w-75(type="number")
+        .form-group.row
+            label.col-form-label.col-md-3 Total:
+            .col-md-2
+                input.form-control.h-75.w-75(type="number" disabled="disabled")
+
+    
 //footer
 include partials/footer.pug

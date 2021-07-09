@@ -10,15 +10,37 @@ body h5{
     font-size: 15px;
 }
 
+.formCentral{
+    text-align: center;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+body h3{
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .titulos {
     text-transform: uppercase;
     text-align: center;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .combineLabelInput {
     text-align: right;
+    align-items: center;
 }
 
 .form-control{
@@ -27,6 +49,16 @@ body h5{
 
 input::placeholder{
     font-size: 12px;
+}
+
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
 .container {
