@@ -23,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     estudiantes: DataTypes.INTEGER,
     personal_limp_jard: DataTypes.INTEGER,
     personal_mando: DataTypes.INTEGER,
-    visitantes_por_dia: DataTypes.INTEGER
+    visitantes_por_dia: DataTypes.INTEGER,
+    total_personal: DataTypes.INTEGER
   }, {
     sequelize,
     tableName: 'info_operativa',
