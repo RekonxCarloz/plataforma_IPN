@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   info_operativa.init({
-    id_dependencia: {
+    id_datosOperativos: {
       type: DataTypes.INTEGER,
       primaryKey: true
     },
