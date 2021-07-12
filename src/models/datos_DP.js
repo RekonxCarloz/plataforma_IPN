@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      datos_DP.hasMany(models.datos_Responsable, { as: "datosResp", foreignKey: "id_responsable" });
     }
   };
   datos_DP.init({

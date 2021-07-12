@@ -10,12 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      datos_Responsable.belongsTo(models.datos_DP, {foreignKey: "id_responsable"});
+      datos_Responsable.hasMany(models.datos_DP, { as: "datosResp", foreignKey: "id_responsable" });
+      models.datos_DP.belongsTo(datos_Responsable, {foreignKey: "id_responsable"});
     }
   };
   datos_Responsable.init({
     id_responsable: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true
     },
     nombre_responsable: DataTypes.STRING,
