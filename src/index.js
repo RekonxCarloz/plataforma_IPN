@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/public/'));
 app.listen(app.get('port'), () => {
     console.log('Server listo', app.get('port'));
 
-    sequelize.sync({ force: true }).then(()=>{
+    sequelize.sync({ force: false }).then(()=>{
         console.log("Database connection success");
     })
 
