@@ -12,8 +12,6 @@ body
         h1 Iniciar Sesión
         form(action="/login" method="POST")
             .txt_field
-                if (messages)
-                    .alert-danger {messages.error}
                 input(type='text' name="usuario" required)
                 span
                 label Usuario

@@ -20,7 +20,7 @@ module.exports = {
       estado: {
         type: Sequelize.STRING
       },
-      delegacion / Municipio: {
+      delegacion_Municipio: {
         type: Sequelize.STRING
       },
       colonia: {
