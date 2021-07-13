@@ -24,12 +24,10 @@ module.exports = {
                         user: user,
                         token: token
                     })
-
                 }else{
                     res.status(401).json({ msg: "Contraseña Inválida" })
                 }
             }
-
         }).catch(err =>{
             res.status(500).json(err);
         })
