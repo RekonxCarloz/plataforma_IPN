@@ -12,6 +12,8 @@ body
         h1 Iniciar Sesión
         form(action="/login" method="POST")
             .txt_field
+                if (messages)
+                    .alert-danger {messages.error}
                 input(type='text' name="usuario" required)
                 span
                 label Usuario
@@ -19,5 +21,5 @@ body
                 input(type='password' name="password" required)
                 span
                 label Contrase&ntilde;a
-            input(type='submit' value='signin')
+            input(type='submit' value='Iniciar Sesión')
 include partials/footer.pug
