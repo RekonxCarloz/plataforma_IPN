@@ -10,7 +10,7 @@ app.set('view engine', 'pug');
 
 // middlewares
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 // routes
 app.use(require('./routes/routes'));
