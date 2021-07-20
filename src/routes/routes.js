@@ -2,9 +2,14 @@ const express = require('express');
 const router = express.Router();
 
 // Controllers
+const usrcontroller = require('../controllers/usuarioController');
+
+
+
+
 
 // Inicio
-router.get('/', (req, res) =>{
+router.get('/inicio', (req, res) =>{
     res.render('index');
 });
 
@@ -48,8 +53,6 @@ router.get('/login', (req, res) =>{
 });
 
 // POST Login
-router.post('/login', (req, res) =>{
-    req.body.usuario
-})
+router.post('/login', usrcontroller.signIn);
 
 module.exports = router;

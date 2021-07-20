@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const { sequelize } = require('../src/models/index');
-const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('express-flash');
+const passport = require('passport');
+require('../config/passport');
 const passportLocal = require('passport-local').Strategy;
 
 // Settings
@@ -23,6 +24,7 @@ app.use(session({
     saveUninitialized: true
 }));
 
+// Initialize Passport
 app.use(passport.initialize());
 app.use(passport.session());
 
