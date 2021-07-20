@@ -2,12 +2,10 @@ const passport = require ('passport');
 const { usuarios } = require('../models');
 
 
-module.exports = {
-    signIn(req, res, next){
-        passport.authenticate('local.signin', {
-            successRedirect: '/inicio',
-            failureRedirect: '/login',
-            failureFlash: true
-        });
-    }
-}
+exports.signIn = (req, res, next) => {
+    passport.authenticate('local.signin', {
+        successRedirect: '/infoGeneral',
+        failureRedirect: '/login',
+        failureFlash: true
+    })(req, res, next);
+};
