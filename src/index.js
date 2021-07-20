@@ -4,15 +4,22 @@ const path = require('path');
 const { sequelize } = require('../src/models/index');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const flash = require('express-flash');
 const passport = require('passport');
 require('../config/passport');
 const passportLocal = require('passport-local').Strategy;
+const flash = require('connect-flash');
 
 // Settings
 app.set('port', 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+// Variables globales
+app.use((req, res, next) =>{
+    app.locals.success = req.flash('success');
+    next();
+});
+
 
 // middlewares
 app.use(express.json());
@@ -23,6 +30,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+app.use(flash());
 
 // Initialize Passport
 app.use(passport.initialize());
