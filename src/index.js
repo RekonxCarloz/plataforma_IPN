@@ -14,13 +14,6 @@ app.set('port', 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-// Variables globales
-app.use((req, res, next) =>{
-    app.locals.success = req.flash('success');
-    next();
-});
-
-
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -31,6 +24,12 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(flash());
+
+// Variables globales
+app.use((req, res, next) =>{
+    app.locals.success = req.flash('success');
+    next();
+});
 
 // Initialize Passport
 app.use(passport.initialize());

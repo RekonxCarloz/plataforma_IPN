@@ -12,6 +12,9 @@ const usrcontroller = require('../controllers/usuarioController');
 router.get('/inicio', (req, res) =>{
     res.render('index');
 });
+router.get('/', (req, res) =>{
+    res.render('index');
+});
 
 // About
 router.get('/about', (req, res) =>{
