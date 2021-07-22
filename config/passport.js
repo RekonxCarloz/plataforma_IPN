@@ -16,10 +16,12 @@ passport.use('local.signin', new LocalStrategy({
             if(usuario.password === password){
                 done(null, usuario, req.flash('success', 'Bienvenido '+ usuario));
             }else{
-                done(null, false, req.flash('success', 'Password no coincide'));
+                done(null, false, req.flash('message', 'Contraseña Incorrecta'));
+                console.log(req.flash('message'));
             }
         }else{
-            return done(null, false, req.flash('success', 'El usuario no se encontró'));
+            console.log(req.flash('message'));
+            return done(null, false, req.flash('message', 'El usuario no existe'));
         }
     })
 }));
