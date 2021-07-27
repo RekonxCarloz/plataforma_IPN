@@ -25,16 +25,17 @@ app.use(session({
 }));
 app.use(flash());
 
+// Initialize Passport
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Variables globales
 app.use((req, res, next) =>{
     app.locals.success = req.flash('success');
     app.locals.message = req.flash('message');
+    app.locals.user = req.usuario;
     next();
 });
-
-// Initialize Passport
-app.use(passport.initialize());
-app.use(passport.session());
 
 // routes
 app.use(require('./routes/routes'));
