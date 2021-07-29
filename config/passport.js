@@ -7,47 +7,37 @@ passport.use('local.signin', new LocalStrategy({
     passwordField: 'password',
     passReqToCallback: true
 }, async (req, usuario, password, done) =>{
-    usuarios.findOne({
+    await usuarios.findOne({
         where: {
             usuario: usuario
         }
     }).then(function(usuario){
         if(usuario){
-            console.log("Usuario encontrado");
             if(usuario.password === password){
-                done(null, usuario, req.flash(success, 'Bienvenido '+ usuario));
+                done(null, usuario, req.flash('success', 'Bienvenido '+ usuario));
             }else{
-                done(null, false, req.flash(success, 'Password no coincide'));
+                done(null, false, req.flash('message', 'Usuario o Contraseña incorrectos'));
+                console.log(req.flash('message'));
             }
         }else{
-            return done(null, false, req.flash(success, 'El usuario no se encontró'));
+            console.log(req.flash('message'));
+            return done(null, false, req.flash('message', 'Usuario o Contraseña incorrectos'));
         }
     })
 }));
 
 
 //serialize
-passport.serializeUser(function(usuario, done) {
- 
+passport.serializeUser((usuario, done)=>{
     done(null, usuario.id_usuario);
- 
 });
 
 // deserialize user 
-passport.deserializeUser(function(id, done) {
- 
-    User.findById(id).then(function(usuario) {
- 
-        if (usuario) {
- 
-            done(null, usuario.get());
- 
-        } else {
- 
-            done(usuario.errors, null);
- 
+passport.deserializeUser(async (id, done)=>{
+    await usuarios.findOne({
+        where: {
+            id_usuario: id
         }
- 
-    });
- 
+    })
+    done(null, id);
 });

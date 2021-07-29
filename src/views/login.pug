@@ -8,11 +8,12 @@ html(lang="en")
         title Login - Plataforma CPS
 body 
     include partials/navSesion.pug
+    include partials/flashMessages.pug
     .centerLogin
         h1 Iniciar Sesión
         form(action="/login" method="POST")
             .txt_field
-                input(type='text' name="usuario" required)
+                input(type='text' name="usuario" autofocus required)
                 span
                 label Usuario
             .txt_field
