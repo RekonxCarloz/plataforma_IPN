@@ -19,10 +19,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.centerText
           a.nav-link(href='/infoOperativa') Informaci&oacute;n Operativa
         li.nav-item.dropdown
           a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-            | nombre_dependencia
+            #{user}
           ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
             li
-              a.dropdown-item(href='/login') Cerrar Sesi&oacute;n
+              a.dropdown-item(href='/logout') Cerrar Sesi&oacute;n
             .dropdown-divider
             li
               a.dropdown-item(href='/about') Acerca De 

@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Controllers
 const usrcontroller = require('../controllers/usuarioController');
-
+const {isLoggedIn, isNotLoggedIn} = require('../controllers/authCheck');
 
 
 
@@ -22,16 +22,16 @@ router.get('/about', (req, res) =>{
 });
 
 // Diagnóstico Área Institucional de Conservación Ecológica
-router.get('/aice', (req, res) =>{
+router.get('/aice', isLoggedIn, (req, res) =>{
     res.render('aice');
 });
 
 // Diagnóstico Agua y Energía  
-router.get('/energia', (req, res) =>{
+router.get('/energia', isLoggedIn, (req, res) =>{
     res.render('energia');
 });
 
-router.get('/agua', (req, res) =>{
+router.get('/agua', isLoggedIn, (req, res) =>{
     res.render('agua');
 })
 
@@ -41,21 +41,27 @@ router.get('/contacto', (req, res) =>{
 });
 
 // Datos Responsable
-router.get('/infoGeneral', (req, res) =>{
+router.get('/infoGeneral', isLoggedIn, (req, res) =>{
     res.render('infoGeneral');
 });
 
 // Informacion operativa
-router.get('/infoOperativa', (req, res) =>{
+router.get('/infoOperativa', isLoggedIn, (req, res) =>{
     res.render('infoOperativa');
 });
 
 // Login
-router.get('/login', (req, res) =>{
+router.get('/login', isNotLoggedIn, (req, res) =>{
     res.render('login');
 });
 
+// LogOut
+router.get('/logout', isLoggedIn, (req, res) =>{
+    req.logOut();
+    res.redirect('inicio');
+});
+
 // POST Login
-router.post('/login', usrcontroller.signIn);
+router.post('/login', isNotLoggedIn, usrcontroller.signIn);
 
 module.exports = router;
