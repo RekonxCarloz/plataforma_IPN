@@ -22,6 +22,14 @@ body h3{
     padding-bottom: 10px;
 }
 
+body h2{
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 1px;
+    margin-bottom: 1px;
+
+}
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
@@ -66,8 +74,30 @@ table {
     margin-bottom: 20px;
 }
 
-.container {
-    width: 100%;
+.logoNav{
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    padding-right: 2px;
+}
+
+.about-info, .reservations-features {
+    margin-top: 90px;
+    font-family: 'Lato', sans-serif;
+    color: #6e6d64;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+}
+.about-features .span4, .about-info {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-sm {
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -194,7 +224,7 @@ input[type="submit"]:hover{
     padding: 30px 10px 10px;
 }
 
-a {
+footer a{
     text-decoration: none;
     color: rgb(255, 255, 255);
     text-decoration-color: white;

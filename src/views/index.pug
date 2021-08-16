@@ -8,6 +8,76 @@ html(lang="en")
         title Inicio Residuos
     body 
         include partials/nav.pug
+        .container-sm 
+            #carouselCPS.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators
+                    li.active(data-target='#carouselCPS' data-slide-to='0')
+                    li(data-target='#carouselCPS' data-slide-to='1')
+                    li(data-target='#carouselCPS' data-slide-to='2')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100.h-25(src='/img/logoCPS_slide.jpg' alt='First slide')
+                    .carousel-item
+                        img.d-block.w-100(src='/img/logoCPS_slide2.jpg' alt='Second slide')
+                    .carousel-item
+                        img.d-block.w-100(src='/img/logoCPS_slide2.jpg' alt='Third slide')
+                a.carousel-control-prev(href='#carouselCPS' role='button' data-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.sr-only
+                a.carousel-control-next(href='#carouselCPS' role='button' data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only
+
+        .container-sm
+            .row.containerText
+                h2
+                    strong
+                        | Preguntas Frecuentes
+        .container-sm
+            .row.containerText
+                h2
+                    strong
+                        | Contacto
+            .row.text-center
+                h2
+                    strong
+                        | Coordinación Politécnica para la Sustentabilidad
+                .col-md-6.container-sm
+                    p
+                        strong 
+                            | Biól. Gabriela Chávez Hidalgo 
+                        br
+                        | Ext. 54458
+                    br
+                    p 
+                        strong 
+                            | Biól. Ma. del Pilar M. Herrera García
+                        br
+                        | Ext. 54457 
+                .col-md-6.container-sm
+                    p
+                        strong 
+                            | Ing. Lorena Yañez Godoy
+                        br
+                        | Ext. 54464
+                    br
+                    p 
+                        strong 
+                            | Biól. Verónica Pacheco González
+                        br
+                        | Ext. 54464 
+                h3
+                    a(href="mailto:sustentabilidad@ipn.mx") sustentabilidad@ipn.mx
+                    a(href="www.sustentabilidad.ipn.mx")    www.sustentabilidad.ipn.mx
+
+        .container-sm
+            .row.containerText
+                h2
+                    strong
+                        | Acerca De
+
+
+
 
 // footer
 include partials/footer.pug
