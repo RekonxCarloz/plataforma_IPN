@@ -1,17 +1,19 @@
+-var mensajeError = message
 
-if message
+
+if mensajeError
     .container
         .row 
             .col-md-4-mx-auto 
                 .alert.alert-danger.alert-dismissible.fade.show(role="alert")
-                    message
+                    mensajeError
                     button(type="button" class="close" data-dismiss="alert" aria-label="Close")
                         span(aria-hidden="true") &times;
-if !success 
+//if success 
     .container
         .row 
             .col-md-4-mx-auto 
                 .alert.alert-success.alert-dismissible.fade.show(role="alert")
-                    success 
+                    #{success} 
                     button(type="button" class="close" data-dismiss="alert" aria-label="Close")
                         span(aria-hidden="true") &times;
