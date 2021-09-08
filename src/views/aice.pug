@@ -7,7 +7,10 @@ head
 
 body
   include partials/navSesion.pug
-  .containerText
+  p
+    h2 
+      | Formulario de AICE (&Aacute;rea Institucional de Conservaci&oacute;n Ecol&oacute;gica)
+  .containerTextAice
     .form-col.containerPregunta
       h5
         | Responsable del registro actual:
@@ -214,6 +217,24 @@ body
           .custom-file
             input#inputGroupFile01.custom-file-input(type='file')
             label.custom-file-label(for='inputGroupFile01') Eleg&iacute;r Archivo... 
+      // Seccion para comentarios
+  h2
+    button(type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#privacyButton") Aviso de privacidad
 
+.modal.fade(id='privacyButton' tabindex='-1' role='dialog' aria-labelledby='exampleModalLongTitle' aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5#exampleModalLongTitle.modal-title Aviso de privacidad
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        | Este diagn&oacute;stico no tiene validez legal ni oficial alguna, es un ejercicio de sondeo promovido a instancias de esta Coordinaci&oacute;n, buscando establecer una medici&oacute;n de las acciones que sobre estos temas realizan nuestras dependencias polit&eacute;cnicas.
+        p
+        | AVISO DE PRIVACIDAD 
+        br
+        | La informaci&oacute;n facilitada para realizar este *DIAGN&Oacute;STICO es de car&aacute;cter personal y privado, únicamente es de uso exclusivo y leg&iacute;timo para validar las respuestas en este diagn&oacute;stico. No se conservara ninguna informaci&oacute;n personal evitando dar otro uso a la misma que no sea la que corresponde a la realizaci&oacute;n y validaci&oacute;n de este ejercicio, seg&uacute;n lo establece la Ley Federal de Protecci&oacute;n de datos personales en posesi&oacute;n de los particulares en su art&iacute;culo 1 y 15.
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-dismiss='modal') Cerrar
 // footer
 include partials/footer.pug

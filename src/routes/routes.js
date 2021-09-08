@@ -3,15 +3,17 @@ const router = express.Router();
 
 // Controllers
 const usrcontroller = require('../controllers/usuarioController');
+const navController = require('../controllers/inicioController');
 const {isLoggedIn, isNotLoggedIn} = require('../controllers/authCheck');
 
 
 
 
 // Inicio
-router.get('/inicio', (req, res) =>{
+router.get('/inicio', (req, res)=>{
     res.render('index');
 });
+
 router.get('/', (req, res) =>{
     res.render('index');
 });

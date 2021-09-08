@@ -14,7 +14,7 @@ passport.use('local.signin', new LocalStrategy({
     }).then(function(usuario){
         if(usuario){
             if(usuario.password === password){
-                done(null, usuario, req.flash('success', 'Bienvenido '+ usuario));
+                done(null, usuario, req.flash('success', 'Bienvenido '+ usuario.nombreCorto));
             }else{
                 done(null, false, req.flash('message', 'Usuario o Contraseña incorrectos'));
                 console.log(req.flash('message'));
