@@ -19,7 +19,9 @@ body
                     | Responsable del registro actual:
                     p
         // Pregunta 1
-        // Poner un pop up  si contesta "NO" "En el area metropolitana solicitar a la dirección de servicios generales dserviciosgrales@ipn.mx"
+        // En caso de que "no" desplegar opciones
+        // - Estima el consumo según la cantidad de equipos conectados y horas de uso 
+        
         .form-group.col-md-6.containerPregunta
             label(for='pregunta1')
                 | 1. &iquest;Cuenta el inmueble con medidores de consumo de energ&iacute;a
@@ -31,7 +33,9 @@ body
                 input#opcionNo.custom-control-input(type='radio' name='customRadio')
                 label.custom-control-label(for='opcionNo') No
         .form-group.col-md-6.containerPregunta
+            
             label(for='pregunta1_1') &iquest;Cuenta con copia de los recibos?
+            // Poner un pop up  si contesta "NO" "En el area metropolitana solicitar a la dirección de servicios generales dserviciosgrales@ipn.mx"
             .custom-control.custom-radio
                 input#opcionSi_1_1.custom-control-input(type='radio' name='customRadio1_1')
                 label.custom-control-label(for='opcionSi_1_1') Si
@@ -55,6 +59,20 @@ body
                         th(scope='col') 5to Bimestre
                         th(scope='col') 6to Bimestre
                 tbody
+                    tr
+                        th(scope='row') 2022
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='kW')
                     tr
                         th(scope='row') 2021
                         td
@@ -83,20 +101,6 @@ body
                             input#pregunta2.form-control(type='text' placeholder='kW')
                         td
                             input#pregunta2.form-control(type='text' placeholder='kW')
-                    tr
-                        th(scope='row') 2019
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='kW')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='kW')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='kW')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='kW')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='kW')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='kW')
         // Pregunta 3
         .form-group.col-md-6.containerPregunta
             label(for='pregunta3')
@@ -105,16 +109,19 @@ body
                 | de apagadores para cada uno?
             .custom-control.custom-radio
                 input#opcionSiempre.custom-control-input(type='radio' name='customRadio2')
-                label.custom-control-label(for='opcionSiempre') Siempre
+                label.custom-control-label(for='opcionSiempre') 100 %
             .custom-control.custom-radio
                 input#opcionCasiSiempre.custom-control-input(type='radio' name='customRadio2')
-                label.custom-control-label(for='opcionCasiSiempre') Casi Siempre
+                label.custom-control-label(for='opcionCasiSiempre') 75 %
             .custom-control.custom-radio
                 input#opcionA_veces.custom-control-input(type='radio' name='customRadio2')
-                label.custom-control-label(for='opcionA_veces') A veces
+                label.custom-control-label(for='opcionA_veces') 50 %
+            .custom-control.custom-radio
+                input#opcionNunca2.custom-control-input(type='radio' name='customRadio3')
+                label.custom-control-label(for='opcionNunca2') 25 %
             .custom-control.custom-radio
                 input#opcionNunca.custom-control-input(type='radio' name='customRadio2')
-                label.custom-control-label(for='opcionNunca') Nunca
+                label.custom-control-label(for='opcionNunca') 0 %
         // Pregunta 4
         .form-group.col-md-6.containerPregunta
             label(for='pregunta4')
@@ -123,16 +130,19 @@ body
                 | movimiento?
             .custom-control.custom-radio
                 input#opcionSiempre2.custom-control-input(type='radio' name='customRadio3')
-                label.custom-control-label(for='opcionSiempre2') Siempre
+                label.custom-control-label(for='opcionSiempre2') 100 %
             .custom-control.custom-radio
                 input#opcionCasiSiempre2.custom-control-input(type='radio' name='customRadio3')
-                label.custom-control-label(for='opcionCasiSiempre2') Casi Siempre
+                label.custom-control-label(for='opcionCasiSiempre2') 75 %
             .custom-control.custom-radio
                 input#opcionA_veces2.custom-control-input(type='radio' name='customRadio3')
-                label.custom-control-label(for='opcionA_veces2') A veces
+                label.custom-control-label(for='opcionA_veces2') 50 %
             .custom-control.custom-radio
                 input#opcionNunca2.custom-control-input(type='radio' name='customRadio3')
-                label.custom-control-label(for='opcionNunca2') Nunca
+                label.custom-control-label(for='opcionNunca2') 25 %
+            .custom-control.custom-radio
+                input#opcionNunca2.custom-control-input(type='radio' name='customRadio3')
+                label.custom-control-label(for='opcionNunca2') 0 %
         // Pregunta 5
         .form-group.col-md-6.containerPregunta
             label(for='pregunta5')
@@ -188,10 +198,7 @@ body
             .custom-control.custom-radio
                 input#opcionNo_7.custom-control-input(type='radio' name='customRadio6')
                 label.custom-control-label(for='opcionNo_7') No
-            .custom-control.custom-radio
-                input#opcionOtro_7.custom-control-input(type='radio' name='customRadio6')
-                label.custom-control-label(for='opcionOtro_7') Otro
-            input.form-control(for='opcionOtro_7' type='text' placeholder='Indique su respuesta')
+            
         // Pregunta 8
         .form-group.col-md-6.containerPregunta
             label(for='pregunta8')
@@ -204,52 +211,52 @@ body
             .custom-control.custom-radio
                 input#opcionNo_8.custom-control-input(type='radio' name='customRadio7')
                 label.custom-control-label(for='opcionNo_8') No
+        // Caso "No"
+        .form-group.col-md-6.containerPregunta
+            label(for='pregunta8_No') &iquest;C&oacute;mo prev&eacute; resolver las deficiencias?
+            input#pregunta8_No.form-control(type='text' placeholder='Indique su respuesta')
+        
         // Pregunta 9
         .form-group.col-md-6.containerPregunta
-            label(for='pregunta9') 9. &iquest;C&oacute;mo prev&eacute; resolver las deficiencias?
-            input#pregunta9.form-control(type='text' placeholder='Indique su respuesta')
+            label(for='pregunta9')
+                | 9. &iquest;En qu&eacute; proporci&oacute;n se ha incluido en las instalaciones, el uso de
+                | timers, sensores de movimiento o nuevas tecnolog&iacute;as como luminarias solares?
+            .custom-control.custom-radio
+                input#opcion100_9.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion100_9') 100 %
+            .custom-control.custom-radio
+                input#opcion75_9.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion75_9') 75 %
+            .custom-control.custom-radio
+                input#opcion50_9.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion50_9') 50 %
+            .custom-control.custom-radio
+                input#opcion25_9.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion25_9') 25 %
+            .custom-control.custom-radio
+                input#opcion0_9.custom-control-input(type='radio' name='customRadio8')
+                label.custom-control-label(for='opcion0_9') 0 %
         // Pregunta 10
         .form-group.col-md-6.containerPregunta
             label(for='pregunta10')
-                | 10. &iquest;En qu&eacute; proporci&oacute;n se ha incluido en las instalaciones, el uso de
-                | timers, sensores de movimiento o nuevas tecnolog&iacute;as como luminarias solares?
-            .custom-control.custom-radio
-                input#opcion100_10.custom-control-input(type='radio' name='customRadio8')
-                label.custom-control-label(for='opcion100_10') 100 %
-            .custom-control.custom-radio
-                input#opcion75_10.custom-control-input(type='radio' name='customRadio8')
-                label.custom-control-label(for='opcion75_10') 75 %
-            .custom-control.custom-radio
-                input#opcion50_10.custom-control-input(type='radio' name='customRadio8')
-                label.custom-control-label(for='opcion50_10') 50 %
-            .custom-control.custom-radio
-                input#opcion25_10.custom-control-input(type='radio' name='customRadio8')
-                label.custom-control-label(for='opcion25_10') 25 %
-            .custom-control.custom-radio
-                input#opcion0_10.custom-control-input(type='radio' name='customRadio8')
-                label.custom-control-label(for='opcion0_10') 0 %
-        // Pregunta 11
-        .form-group.col-md-6.containerPregunta
-            label(for='pregunta11')
-                | 11. &iquest;En qu&eacute; proporci&oacute;n se ha incluido en las instalaciones el uso de
+                | 10. &iquest;En qu&eacute; proporci&oacute;n se ha incluido en las instalaciones el uso de
                 | nuevas tecnolog&iacute;as de alimentaci&oacute;n con energ&iacute;a alterna a trav&eacute;s de la instalaci&oacute;n de celdas
                 | fotovoltaicas, calentadores y paneles solares?
             .custom-control.custom-radio
-                input#opcion100_11.custom-control-input(type='radio' name='customRadio9')
-                label.custom-control-label(for='opcion100_11') 100 %
+                input#opcion100_10.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion100_10') 100 %
             .custom-control.custom-radio
-                input#opcion75_11.custom-control-input(type='radio' name='customRadio9')
-                label.custom-control-label(for='opcion75_11') 75 %
+                input#opcion75_10.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion75_10') 75 %
             .custom-control.custom-radio
-                input#opcion50_11.custom-control-input(type='radio' name='customRadio9')
-                label.custom-control-label(for='opcion50_11') 50 %
+                input#opcion50_10.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion50_10') 50 %
             .custom-control.custom-radio
-                input#opcion25_11.custom-control-input(type='radio' name='customRadio9')
-                label.custom-control-label(for='opcion25_11') 25 %
+                input#opcion25_10.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion25_10') 25 %
             .custom-control.custom-radio
-                input#opcion0_11.custom-control-input(type='radio' name='customRadio9')
-                label.custom-control-label(for='opcion0_11') 0 %
-                label.custom-control-label(for='opcion0_7') Nada
+                input#opcion0_10.custom-control-input(type='radio' name='customRadio9')
+                label.custom-control-label(for='opcion0_10') 0 %
         // Seccion para comentarios
     h2
         button(type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#privacyButton") Aviso de privacidad
