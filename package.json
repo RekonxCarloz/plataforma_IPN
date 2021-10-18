@@ -1,7 +1,6 @@
 {
   "name": "plataforma-residuos",
   "version": "1.0.1",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "npm src",
@@ -36,5 +35,14 @@
   },
   "resolutions": {
     "serialize-javascript": "3.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RekonxCarloz/plataforma_IPN.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RekonxCarloz/plataforma_IPN/issues"
+  },
+  "homepage": "https://github.com/RekonxCarloz/plataforma_IPN#readme",
+  "description": ""
 }
