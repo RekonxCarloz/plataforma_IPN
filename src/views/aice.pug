@@ -8,7 +8,7 @@ head
 body
   include partials/navSesion.pug
   p
-    h2 
+    h1 
       | Formulario de AICE (&Aacute;rea Institucional de Conservaci&oacute;n Ecol&oacute;gica)
   .containerTextAice
     .form-col.containerPregunta
@@ -217,7 +217,12 @@ body
           .custom-file
             input#inputGroupFile01.custom-file-input(type='file')
             label.custom-file-label(for='inputGroupFile01') Eleg&iacute;r Archivo... 
+      center 
+        button.btn.btn-success(type='button') Guardar Informaci&oacute;n
+      
+      
       // Seccion para comentarios
+
   h2
     button(type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#privacyButton") Aviso de privacidad
 

@@ -7,69 +7,74 @@ head
 body
 include partials/navSesion.pug
 .containerText
-  h5.titulos
-    | Informaci&oacute;n General
-  .combineLabelInput.centerForm
-    .form-group.row
-      label.col-form-label.col-md-3 Dependencia politécnica&nbsp;
-      .col-sm-4
-        input.form-control.h-75(type="text" disabled="disabled" placeholder = "usuario")
-    .form-group.row
-      label.col-form-label.col-md-3(required) Responsable del reporte *
-      .col-sm-4
-        input.form-control.h-75(type="text")
-    .form-group.row
-      label.col-form-label.col-md-3 &Aacute;rea de adscripci&oacute;n *
-      .col-sm-4
-        input.form-control.h-75(type="text")
-    .form-group.row
-      label.col-form-label.col-md-3 Tipo de plaza *
-      .col-sm-4
-        select.form-control.h-75
-          option(selected) --
-          option Base 
-          option Interinato 
-          option Confianza 
-          option Otro
-    .form-group.row
-      label.col-form-label.col-md-3 Funci&oacute;n en el Comit&eacute; Ambiental *
-      .col-sm-4
-        select.form-control.h-75
-          option(selected) --
-          option Titular 
-          option Representante del titular 
-          option Subdirector Administrativo
-          option Jefe de mantenimiento y servicios
-          option Otro
-    .form-group.row
-      label.col-form-label.col-md-3 Correo electr&oacute;nico * 
-      .col-sm-4
-        input.form-control.h-75(type="text")
-    .form-group.row
-      label.col-form-label.col-md-3 Extensi&oacute;n * 
-      .col-sm-4
-        input.form-control.h-75(type="text")
-    .form-group.row
-      label.col-form-label.col-md-3 Estado * 
-      .col-sm-4
-        input.form-control.h-75(type="text")
-    .form-group.row
-      label.col-form-label.col-md-3 Delegaci&oacute;n / Municipio * 
-      .col-sm-4
-        input.form-control.h-75(type="text")
-    .form-group.row
-      label.col-form-label.col-md-3 Calle y N&uacute;mero * 
-      .col-sm-4
-        input.form-control.h-75(type="text")
-    .form-group.row
-      label.col-form-label.col-md-3 Colonia * 
-      .col-sm-4
-        input.form-control.h-75(type="text")
-    .form-group.row
-      label.col-form-label.col-md-3 C&oacute;digo Postal * 
-      .col-sm-4
-        input.form-control.h-75(type="text")
-  
+  center
+    h5.titulos
+      | Informaci&oacute;n General
+    .combineLabelInput.centerForm
+      .form-group.row
+        label.col-form-label.col-md-3 Dependencia politécnica&nbsp;
+        .col-sm-4
+          input.form-control.h-75(type="text" disabled="disabled" placeholder = "usuario")
+      .form-group.row
+        label.col-form-label.col-md-3(required) Responsable del reporte *
+        .col-sm-4
+          input.form-control.h-75(type="text")
+      .form-group.row
+        label.col-form-label.col-md-3 &Aacute;rea de adscripci&oacute;n *
+        .col-sm-4
+          input.form-control.h-75(type="text")
+      .form-group.row
+        label.col-form-label.col-md-3 Tipo de plaza *
+        .col-sm-4
+          select.form-control.h-75
+            option(selected) --
+            option Base 
+            option Interinato 
+            option Confianza 
+            option Otro
+      .form-group.row
+        label.col-form-label.col-md-3 Funci&oacute;n en el Comit&eacute; Ambiental *
+        .col-sm-4
+          select.form-control.h-75
+            option(selected) --
+            option Titular 
+            option Representante del titular 
+            option Subdirector Administrativo
+            option Jefe de mantenimiento y servicios
+            option Otro
+      .form-group.row
+        label.col-form-label.col-md-3 Correo electr&oacute;nico * 
+        .col-sm-4
+          input.form-control.h-75(type="text")
+      .form-group.row
+        label.col-form-label.col-md-3 Extensi&oacute;n * 
+        .col-sm-4
+          input.form-control.h-75(type="text")
+      .form-group.row
+        label.col-form-label.col-md-3 Estado * 
+        .col-sm-4
+          input.form-control.h-75(type="text")
+      .form-group.row
+        label.col-form-label.col-md-3 Delegaci&oacute;n / Municipio * 
+        .col-sm-4
+          input.form-control.h-75(type="text")
+      .form-group.row
+        label.col-form-label.col-md-3 Calle y N&uacute;mero * 
+        .col-sm-4
+          input.form-control.h-75(type="text")
+      .form-group.row
+        label.col-form-label.col-md-3 Colonia * 
+        .col-sm-4
+          input.form-control.h-75(type="text")
+      .form-group.row
+        label.col-form-label.col-md-3 C&oacute;digo Postal * 
+        .col-sm-4
+          input.form-control.h-75(type="text")
+      br
+      br
+  center 
+    button.btn.btn-primary(type='button') Guardar Informaci&oacute;n
+
 
 // footer
 include partials/footer.pug
