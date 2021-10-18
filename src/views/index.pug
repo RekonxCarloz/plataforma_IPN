@@ -5,9 +5,22 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Inicio Residuos
+        title Gesti&oacute;n Sustentable
     body 
         include partials/nav.pug
+
+        .container-sm
+            .row.containerText 
+                h1 
+                    strong 
+                        | ACCIONES DE GESTI&Oacute;N SUSTENTABLE
+            .row.containerText 
+                h5 
+                    | La administraci&oacute;n responsable de los recursos disponibles y el privilegio de la selecci&oacute;n de insumos de m&oacute;xima eficiencia, se asocia a la planeaci&oacute;n de los Programas de Gesti&oacute;n Sustentable, a trav&oacute;s del empleo de indicadores que permitan evaluar la efectividad de las estrategias de ahorro, en los rubros de: agua, energ&oacute;a, patrimonio natural como el arbolado y &oacute;reas verdes, as&oacute; como de ordenamiento territorial del Instituto. 
+                    br
+                    br 
+                    | En virtud de lo anterior, la Coordinaci&oacute;n Polit&oacute;cnica para la Sustentabilidad, coadyuvando con la Secretar&oacute;a de Administraci&oacute;n, pone a disposici&oacute;n de las dependencias polit&oacute;cnicas, los presentes instrumentos de diagn&oacute;stico y registro, cuya aplicaci&oacute;n, tiene el prop&oacute;sito de fungir como herramienta que oriente la toma de decisiones e instalaci&oacute;n de pol&oacute;ticas espejo, al seno de cada dependencia polit&oacute;cnica, que permitan una m&oacute;xima eficacia en la contribuci&oacute;n del Instituto Polit&oacute;cnico Nacional y sus entidades, a minimizar las causas del cambio clim&oacute;tico.
+
         .container-sm 
             #carouselCPS.carousel.slide(data-ride='carousel')
                 ol.carousel-indicators
@@ -34,13 +47,128 @@ html(lang="en")
                     strong
                         | Preguntas Frecuentes
             .row.text-center
-                .col-md-6.container-sm
-                    strong 
-                        | ¿Qué es un plan de manejo ambiental?
-                    
-                .col-md-6.container-sm
-                    strong 
-                        | ¿Qué es un plan de manejo ambiental?
+                .col-sm-6.container-lg
+                    p
+                        a.btn.btn-outline-primary(data-toggle='collapse' href='#collapse_acciones_gestionSustentable' role='button' aria-expanded='false' aria-controls='collapse_acciones_gestionSustentable')
+                            | ¿Qu&eacute; son las acciones de gesti&oacute;n sustentable de la dependencia polit&eacute;cnica?
+                .col-sm-6.container-lg
+                    p
+                        a.btn.btn-outline-primary(data-toggle='collapse' href='#collapse_que_es_manejoAmbiental' role='button' aria-expanded='false' aria-controls='collapseExample')
+                            | ¿Qu&eacute; es un plan de manejo ambiental?
+
+                #collapse_acciones_gestionSustentable.collapse
+                    .card.card-body.containerText
+                        h5
+                            strong
+                                | ¿Qu&eacute; son las acciones de gesti&oacute;n sustentable de la dependencia polit&eacute;cnica?
+                            br
+                            br
+                            | Es una integraci&oacute;n de pol&iacute;ticas expresada como un conjunto organizado de acciones que cada DP instala para orientar a su personal en aras de que contribuya a mejorar el desempeño ambiental de sus actividades cotidianas. Se trata de desarrollar h&aacute;bitos sustentables mediante un consumo responsable y eficiente de los recursos energ&eacute;ticos, el agua y el patrimonio natural, as&iacute; como de otros bienes y servicios asociados a las actividades que desarrolla.
+                br
+                
+                #collapse_que_es_manejoAmbiental.collapse
+                    .card.card-body.containerText
+                        h5
+                            strong
+                                | ¿Qu&eacute; es un plan de manejo ambiental?
+                            br
+                            br
+                            | Es un instrumento de programaci&oacute;n, que mediante la identificaci&oacute;n de &aacute;reas de oportunidad y realizaci&oacute;n de pr&aacute;cticas correctivas, permite cumplir con las premisas de sustentabilidad, a trav&eacute;s de estrategias de minimizaci&oacute;n de la generaci&oacute;n de emisiones y descargas que impactan el ambiente, bajo criterios de eficiencia ambiental, tecnol&oacute;gica, econ&oacute;mica y social que, para efectos del presente instrumento, se centran en t&oacute;picos de agua, energ&iacute;a y &aacute;reas de conservaci&oacute;n ecol&oacute;gica en el IPN (AICE).
+                            br
+                            br
+                            | Esta planeaci&oacute;n, tiene como prop&oacute;sito que cada Dependencia Polit&eacute;cnica (DP), actualice los diagn&oacute;sticos b&aacute;sicos en materia de instalaciones, consumo y emisiones en torno a los rubros hidr&aacute;ulico y energ&eacute;tico, que se debe expresar en pol&iacute;ticas de manejo y equipamientos que permitan el cumplimiento del marco normativo vigente con aplicaci&oacute;n de indicadores de eficiencia y cumplimiento ambiental, sumado desde luego a la ejecuci&oacute;n de medidas rigurosas de conocimiento, conservaci&oacute;n y manejo del patrimonio natural bajo resguardo del IPN.
+        
+                .col-sm-6.container-lg
+                    p
+                        a.btn.btn-outline-primary(data-toggle='collapse' href='#collapse_acciones_huellaCarbono' role='button' aria-expanded='false' aria-controls='collapse_acciones_gestionSustentable')
+                            | ¿C&oacute;mo contribuyen las acciones de gesti&oacute;n sustentable a reducir la huella de carbono?
+                .col-sm-6.container-lg
+                    p
+                        a.btn.btn-outline-primary(data-toggle='collapse' href='#collapse_diagnostico_integral_utilidad' role='button' aria-expanded='false' aria-controls='collapseExample')
+                            | ¿Qu&eacute; es el diagn&oacute;stico energ&eacute;tico integral y cu&aacute;l es su utilidad?
+
+                #collapse_acciones_huellaCarbono.collapse
+                    .card.card-body.containerText
+                        h5
+                            strong
+                                | ¿C&oacute;mo contribuyen las acciones de gesti&oacute;n sustentable a reducir la huella de carbono?
+                            br
+                            br
+                            | Las acciones de gesti&oacute;n sustentable se constituyen como estrategias que incorporan, mediante diversos instrumentos institucionales, criterios ambientales en el funcionamiento cotidiano para contribuir a minimizar el impacto ambiental de las operaciones y actividades de la instituci&oacute;n, por lo que se emplean indicadores que permiten medir la eficacia de las mismas en la reducci&oacute;n de las emisiones de gases de efecto invernadero producidas, directa o indirectamente, por las actividades realizadas, en t&eacute;rminos de CO2 equivalente, cuya funci&oacute;n permite evaluar las estrategias de gesti&oacute;n institucional y las &aacute;reas de oportunidad para que el IPN cumpla con mayor eficacia en esta materia.
+
+                
+                #collapse_diagnostico_integral_utilidad.collapse
+                    .card.card-body.containerText
+                        h5
+                            strong
+                                | ¿Qu&eacute; es el diagn&oacute;stico energ&eacute;tico integral y cu&aacute;l es su utilidad?
+                            br
+                            br
+                            | El balance energ&eacute;tico de la dependencia es la primera tarea de an&aacute;lisis para identificar las oportunidades de mejorar la eficiencia, definir los potenciales de ahorro de energ&iacute;a y estimar las inversiones requeridas. Cada inmueble debe contar con un diagn&oacute;stico energ&eacute;tico de sus sistemas de iluminaci&oacute;n. Cada instituci&oacute;n realiza el levantamiento de datos de sus inmuebles de acuerdo con una metodolog&iacute;a espec&iacute;fica. Cada DP cuenta con responsables del levantamiento de datos, para asegurar la uniformidad, la calidad y la veracidad de la informaci&oacute;n. Estos diagn&oacute;sticos deben renovarse cada cinco años.
+
+                .col-sm-6.container-lg
+                    p
+                        a.btn.btn-outline-primary(data-toggle='collapse' href='#collapse_estrategias_rigurosas' role='button' aria-expanded='false' aria-controls='collapse_acciones_gestionSustentable')
+                            | Por qu&eacute; es indispensable instalar estrategias rigurosas de consumo eficiente de agua, tratamiento de efluentes y captaci&oacute;n pluvial?
+                .col-sm-6.container-lg
+                    p
+                        a.btn.btn-outline-primary(data-toggle='collapse' href='#collapse_aice' role='button' aria-expanded='false' aria-controls='collapseExample')
+                            | ¿En qu&eacute; consiste la figura denominada &Aacute;rea Institucional de Conservaci&oacute;n Ecol&oacute;gica, AICE?
+
+                #collapse_estrategias_rigurosas.collapse
+                    .card.card-body.containerText
+                        h5
+                            strong
+                                | Por qu&eacute; es indispensable instalar estrategias rigurosas de consumo eficiente de agua, tratamiento de efluentes y captaci&oacute;n pluvial?
+                            br
+                            br
+                            | La actual tendencia de uso del agua en M&eacute;xico no es sustentable. La disponibilidad del agua es limitada y su accesibilidad todav&iacute;a m&aacute;s. En muchas ciudades ya se hace evidente su escasez, contaminaci&oacute;n y encarecimiento. Para contribuir a que el uso del agua sea sustentable, lo primero es reducir su consumo. En este sentido, desde 1999 el IMTA ofrece a las dependencias de la APF su Programa para el Uso Eficiente y Racional del Agua (PUERA).
+                            br
+                            br
+                            | El uso eficiente del agua implica en primer t&eacute;rmino, minimizar su consumo, por lo que las premisas son: ahorrar agua, optimizar su consumo y contribuir a disminuir la contaminaci&oacute;n de las aguas usadas. Para lograrlo se requiere: Establecer un Comit&eacute; Interno en cada DP, diagnosticar necesidades y asignar prioridades sobre el uso del agua, disminuir el consumo en las instalaciones de cada DP, modificar, haci&eacute;ndolos m&aacute;s eficientes, los h&aacute;bitos de consumo de agua de los usuarios, promover una cultura de protecci&oacute;n del agua entre la comunidad de la DP, Contribuir con medidas efectivas para que la gesti&oacute;n de los recursos h&iacute;dricos desarrolle criterios ecol&oacute;gicos
+                
+                #collapse_aice.collapse
+                    .card.card-body.containerText
+                        h5
+                            strong
+                                | ¿En qu&eacute; consiste la figura denominada &Aacute;rea Institucional de Conservaci&oacute;n Ecol&oacute;gica, AICE?
+                            br
+                            br
+                            | Para orientar a las DP en el cumplimiento de la premisa de conservar el patrimonio natural bajo resguardo de cada una de las instalaciones, se establece la figura AICE asociada a un instrumento de planificaci&oacute;n que permita conservar, proteger, restaurar, preservar y aprovechar de forma sustentable el patrimonio, previendo su valoraci&oacute;n para actividades de investigaci&oacute;n y docencia, las &aacute;reas verdes silvestres e inducidas que forman parte del patrimonio paisaj&iacute;stico del Instituto, para mantener su funcionalidad ecol&oacute;gica y servicios ambientales, que deben considerar la realizaci&oacute;n de un diagn&oacute;stico de las &aacute;reas naturales e inducidas, definir con base en sus rasgos los tipos de &aacute;reas de conservaci&oacute;n y con estos elementos elaborar planes de manejo para cada una de las &aacute;reas institucionales de conservaci&oacute;n ecol&oacute;gica.
+
+                .col-sm-12.container-lg
+                    p
+                        a.btn.btn-outline-primary(data-toggle='collapse' href='#collapse_solicitarAsesoria' role='button' aria-expanded='false' aria-controls='collapse_acciones_gestionSustentable')
+                            | ¿C&oacute;mo puede solicitarse asesor&iacute;a sobre estos temas y sus procedimientos?
+                #collapse_solicitarAsesoria.collapse
+                    .card.card-body.containerText
+                        h5
+                            strong
+                                | ¿C&oacute;mo puede solicitarse asesor&iacute;a sobre estos temas y sus procedimientos?
+                            br
+                            br
+                            | Enviando un correo electr&oacute;nico a la entidad de su inter&eacute;s en contactar: 
+                            br
+                            br
+                            strong 
+                                | Coordinaci&oacute;n Polit&eacute;cnica para la Sustentabilidad: 
+                            br
+                            
+                            h3
+                                a(href="www.ipn.mx/sustentabilidad/") www.ipn.mx/sustentabilidad/
+                                br
+                                a(href="mailto:sustentabilidad@ipn.mx") sustentabilidad@ipn.mx
+                        h5
+                            strong
+                                | Direcci&oacute;n de Servicios Generales del IPN: 
+                            br
+                            
+                            h3
+                                a(href="www.ipn.mx/dsg/") www.ipn.mx/dsg/
+                                br
+                                a(href="mailto:dsg@ipn.mx") dsg@ipn.mx 
+
+
         .container-sm
             .row.containerText
                 h2
@@ -49,17 +177,17 @@ html(lang="en")
             .row.text-center
                 h2
                     strong
-                        | Coordinación Politécnica para la Sustentabilidad
+                        | Coordinaci&oacute;n Polit&eacute;cnica para la Sustentabilidad
                 .col-md-6.container-sm
                     p
                         strong 
-                            | Biól. Gabriela Chávez Hidalgo 
+                            | Bi&oacute;l. Gabriela Ch&aacute;vez Hidalgo 
                         br
                         | Ext. 54458
                     br
                     p 
                         strong 
-                            | Biól. Ma. del Pilar M. Herrera García
+                            | Bi&oacute;l. Ma. del Pilar M. Herrera Garc&iacute;a
                         br
                         | Ext. 54457 
                 .col-md-6.container-sm
@@ -71,11 +199,13 @@ html(lang="en")
                     br
                     p 
                         strong 
-                            | Biól. Verónica Pacheco González
+                            | Bi&oacute;l. Ver&oacute;nica Pacheco Gonz&aacute;lez
                         br
                         | Ext. 54464 
                 h3
                     a(href="mailto:sustentabilidad@ipn.mx") sustentabilidad@ipn.mx
+                    br
+
                     a(href="www.sustentabilidad.ipn.mx")    www.sustentabilidad.ipn.mx
 
         .container-sm
@@ -83,6 +213,9 @@ html(lang="en")
                 h2
                     strong
                         | Acerca De
+            .row.containerText 
+                h5
+                    | Con con fundamento en el Plan de Desarrollo Institucional del IPN vigente, expresado a trav&eacute;s de los proyectos del Eje Transversal de “Responsabilidad social y sustentabilidad”, y atendiendo los requerimientos de la Secretar&iacute;a de Administraci&oacute;n a cada Dependencia Polit&eacute;cnica, el presente material prev&eacute; orientar a cada dependencia polit&eacute;cnica en la integraci&oacute;n de un Plan de gesti&oacute;n sustentable, conformado por un conjunto de acciones espec&iacute;ficas y medidas orientadas a mejorar el desempeño ambiental de cada DP, tales como uso eficiente del agua, ahorro, de energ&iacute;a el&eacute;ctrica y conservaci&oacute;n del patrimonio natural bajo resguardo de las instalaciones polit&eacute;cnicas entre otros, que habr&acute; de ser una herramienta de cada dependencia polit&acute;cnica para atender las premisas establecidas en el art&iacute;culo 17bis de la LGEEPA.
 
 
 
