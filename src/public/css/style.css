@@ -8,6 +8,7 @@ body{
 }
 
 body h5{
+    text-align: justify;
     font-size: 15px;
 }
 
@@ -29,6 +30,12 @@ body h2{
     padding-bottom: 1px;
     margin-bottom: 1px;
 
+}
+
+body h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -96,7 +103,7 @@ table {
 }
 
 .container-sm {
-    width: 40%;
+    width: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-right: 15px;
