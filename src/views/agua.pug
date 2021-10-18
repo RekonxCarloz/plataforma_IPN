@@ -4,9 +4,12 @@ head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
     title Agua
-
+// Poner Graficos para bimestres Pregunta 2 para comparar años
 body
     include partials/navSesion.pug
+    p
+        h2 
+            | Formulario de Agua
     .containerText
         form
             .form-col.containerPregunta
@@ -14,6 +17,9 @@ body
                     | Responsable del registro actual:
                     p
         // Pregunta 1
+        // Si contesta "No" habilitar opción múltiple 
+        // - Estimo el consumo según # de descargas de sanitarios y uso de lavabos
+        // - Estimo el consumo según el tiempo de riego
         .form-group.col-md-6.containerPregunta
             label(for='pregunta1') 1. &iquest;Cuenta el inmueble con medidores de consumo de agua potable?
             .custom-control.custom-radio
@@ -23,16 +29,19 @@ body
                 input#opcionNo_1.custom-control-input(type='radio' name='customRadio')
                 label.custom-control-label(for='opcionNo_1') No
                 p
+            // En caso de elegir "Si" Desplegar esta pregunta
             label(for='pregunta1_1') &iquest;Cuenta con copia de los recibos?
+            // Poner un pop up  si contesta "NO" "En el area metropolitana solicitar a la dirección de servicios generales dserviciosgrales@ipn.mx"
             .custom-control.custom-radio
                 input#opcionSi_1_1.custom-control-input(type='radio' name='customRadio1_1')
                 label.custom-control-label(for='opcionSi_1_1') Si
             .custom-control.custom-radio
                 input#opcionNo_1_1.custom-control-input(type='radio' name='customRadio1_1')
                 label.custom-control-label(for='opcionNo_1_1') No
-        // Pregunta 2
+        // Pregunta 2 
+        // PopUp Si no cuenta con los registros de consumo exactas estimar segun los usuarios e intensidad de consumo
         .form-group.col-md-6.containerPregunta
-            label(for='pregunta2') 2. Ingresa el consumo aproximado por bimestre de los ultimos a&ntilde;o
+            label(for='pregunta2') 2. Ingresa el consumo estimado por bimestre de los ultimos a&ntilde;os
             table.table
                 thead
                     tr
@@ -44,6 +53,20 @@ body
                         th(scope='col') 5to Bimestre
                         th(scope='col') 6to Bimestre
                 tbody
+                    tr
+                        th(scope='row') 2022
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='L')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='L')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='L')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='L')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='L')
+                        td
+                            input#pregunta2.form-control(type='text' placeholder='L')
                     tr
                         th(scope='row') 2021
                         td
@@ -60,20 +83,6 @@ body
                             input#pregunta2.form-control(type='text' placeholder='L')
                     tr
                         th(scope='row') 2020
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='L')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='L')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='L')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='L')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='L')
-                        td
-                            input#pregunta2.form-control(type='text' placeholder='L')
-                    tr
-                        th(scope='row') 2019
                         td
                             input#pregunta2.form-control(type='text' placeholder='L')
                         td
@@ -157,5 +166,25 @@ body
             .custom-control.custom-radio
                 input#opcion0_7.custom-control-input(type='radio' name='customRadio5')
                 label.custom-control-label(for='opcion0_7') Nada
+        // Seccion de comentarios        
+    h2
+        button(type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#privacyButton") Aviso de privacidad
+
+.modal.fade(id='privacyButton' tabindex='-1' role='dialog' aria-labelledby='exampleModalLongTitle' aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5#exampleModalLongTitle.modal-title Aviso de privacidad
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        | Este diagn&oacute;stico no tiene validez legal ni oficial alguna, es un ejercicio de sondeo promovido a instancias de esta Coordinaci&oacute;n, buscando establecer una medici&oacute;n de las acciones que sobre estos temas realizan nuestras dependencias polit&eacute;cnicas.
+        p
+        | AVISO DE PRIVACIDAD 
+        br
+        | La informaci&oacute;n facilitada para realizar este *DIAGN&Oacute;STICO es de car&aacute;cter personal y privado, únicamente es de uso exclusivo y leg&iacute;timo para validar las respuestas en este diagn&oacute;stico. No se conservara ninguna informaci&oacute;n personal evitando dar otro uso a la misma que no sea la que corresponde a la realizaci&oacute;n y validaci&oacute;n de este ejercicio, seg&uacute;n lo establece la Ley Federal de Protecci&oacute;n de datos personales en posesi&oacute;n de los particulares en su art&iacute;culo 1 y 15.
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-dismiss='modal') Cerrar
+
 // footer
 include partials/footer.pug
